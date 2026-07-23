@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@source "../views/**/*.blade.php";
+@source "../../app/**/*.php";
+
+@theme {
+  --color-bm-black: #0B0B0C;
+  --color-bm-black-soft: #17181A;
+  --color-bm-black-light: #242529;
+  --color-bm-red: #D62828;
+  --color-bm-red-dark: #A31E1E;
+  --color-bm-red-bright: #E53E3E;
+  --color-bm-yellow: #F4C430;
+  --color-bm-yellow-dark: #C79A1E;
+  --color-bm-white: #F7F7F5;
+  --color-bm-gray: #6B6E73;
+  --color-bm-gray-light: #A0A3A8;
+  --color-bm-gray-mid: #35373B;
+  --font-display: "Oswald", "Archivo Black", sans-serif;
+  --font-body: "Public Sans", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/Oswald-Variable.woff2") format("woff2");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("/fonts/PublicSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: #0B0B0C; color: #F7F7F5; overflow-x: hidden; font-family: var(--font-body); }
+  h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.95; }
+  ::selection { background: #D62828; color: white; }
+}
+
+/* Industrial utilities - pure CSS to avoid @apply scanning issues */
+.hazard-stripe {
+  height: 8px; width: 100%;
+  background: repeating-linear-gradient(-45deg, #F4C430 0, #F4C430 12px, #0B0B0C 12px, #0B0B0C 24px);
+}
+.hazard-stripe-sm {
+  height: 6px; width: 100%;
+  background: repeating-linear-gradient(-45deg, #F4C430 0, #F4C430 8px, #0B0B0C 8px, #0B0B0C 16px);
+}
+.hazard-stripe-red {
+  height: 8px; width: 100%;
+  background: repeating-linear-gradient(-45deg, #D62828 0, #D62828 12px, #0B0B0C 12px, #0B0B0C 24px);
+}
+.clip-diagonal { clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%); }
+.clip-diagonal-left { clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px); }
+.clip-notch { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%); }
+
+.label-industrial {
+  font-family: var(--font-mono);
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: #F4C430; font-weight: 700;
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* WhatsApp float — must stay above stacking contexts created by transform/clip-path sections */
+#wa-float { z-index: 9999 !important; position: fixed !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
