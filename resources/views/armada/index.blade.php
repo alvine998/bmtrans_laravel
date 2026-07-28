@@ -9,25 +9,25 @@
   <div class="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 pt-10 pb-12 lg:pt-14 lg:pb-16">
     <div class="flex items-center gap-3">
       <span class="w-12 h-px bg-bm-yellow"></span>
-      <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-bm-yellow">ARMADA • HARGA TRANSPARAN • NEGO WA</span>
+      <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-bm-yellow">ARMADA • HARGA TRANSPARAN • INFO VIA WA</span>
     </div>
 
     <div class="mt-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
       <div>
         <h1 class="font-display font-black text-[44px] sm:text-[64px] lg:text-[80px] leading-[0.85] uppercase">
-          Armada siap<br>
-          <span class="text-bm-yellow">angkut hari ini</span><br>
-          <span class="inline-block bg-bm-white text-bm-black px-3 py-1 -rotate-1">mulai 200rb</span>
+          Armada<br>
+          <span class="text-bm-yellow">siap jalan</span><br>
+          <span class="inline-block bg-bm-white text-bm-black px-3 py-1 -rotate-1">info harga</span>
         </h1>
         <p class="mt-6 max-w-[48ch] text-[15px] sm:text-[16px] leading-relaxed text-bm-white/70">
           Harga di bawah adalah <b class="text-white">Mulai dari</b> untuk rute pendek / dalam kota. Antar kota, tonase, dan ukuran muatan mempengaruhi tarif akhir.
-          Semua harga <b class="text-bm-yellow">negotiable — hubungi admin via WhatsApp</b> untuk penawaran 2 jam.
+          Hubungi kami via WhatsApp <b class="text-bm-yellow">untuk informasi harga</b> sesuai rute Anda.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3 font-mono text-[11px]">
           <span class="px-3 py-1.5 border border-white/10 bg-white/5">✓ GPS real-time</span>
           <span class="px-3 py-1.5 border border-white/10 bg-white/5">✓ Asuransi all-risk opsional</span>
-          <span class="px-3 py-1.5 border border-bm-yellow/30 bg-bm-yellow/10 text-bm-yellow">✓ Harga nego — chat WA</span>
+          <span class="px-3 py-1.5 border border-bm-yellow/30 bg-bm-yellow/10 text-bm-yellow">✓ Info via WA</span>
         </div>
       </div>
 
@@ -38,25 +38,25 @@
           <div class="mt-4 space-y-4 font-mono text-[12px]">
             <div class="flex gap-3">
               <span class="w-6 h-6 bg-bm-white/10 flex items-center justify-center font-bold">1</span>
-              <span class="text-bm-white/80">Pilih armada — estimasi otomatis tampil mulai 200rb s/d Tronton 1,6jt</span>
+              <span class="text-bm-white/80">Pilih armada — lihat estimasi harga mulai</span>
             </div>
             <div class="flex gap-3">
               <span class="w-6 h-6 bg-bm-white/10 flex items-center justify-center font-bold">2</span>
-              <span class="text-bm-white/80">Klik <b class="text-bm-yellow">Nego dengan Admin Sampai Jadi!</b> — pesan langsung terisi nama armada + harga awal</span>
+              <span class="text-bm-white/80">Klik <b class="text-bm-yellow">Info Harga</b> — chat WA langsung terisi nama armada</span>
             </div>
             <div class="flex gap-3">
               <span class="w-6 h-6 bg-bm-yellow text-bm-black flex items-center justify-center font-bold">3</span>
-              <span class="text-bm-white/80">Admin hitung rute, tonase, bongkar/muat — quote final dalam 2 jam kerja</span>
+              <span class="text-bm-white/80">Admin kasih penawaran sesuai rute & kebutuhan Anda</span>
             </div>
           </div>
 
           <div class="mt-6 flex gap-3">
-            <a href="https://wa.me/{{ $whatsapp }}?text={{ $waMessage }}" target="_blank" class="flex-1 bg-bm-yellow text-bm-black px-4 py-3 font-display font-bold uppercase text-[12px] text-center">Chat WA Sekarang →</a>
-            <a href="{{ route('contact') }}" class="px-4 py-3 border border-white/15 font-display uppercase text-[12px]">Form Penawaran</a>
+            <a href="https://wa.me/{{ $whatsapp }}?text={{ $waMessage }}" target="_blank" class="flex-1 bg-bm-yellow text-bm-black px-4 py-3 font-display font-bold uppercase text-[12px] text-center">Chat WA →</a>
+            <a href="{{ route('contact') }}" class="px-4 py-3 border border-white/15 font-display uppercase text-[12px]">Form Kontak</a>
           </div>
 
           <div class="mt-4 bg-bm-black border border-white/10 p-3 font-mono text-[10px] text-bm-gray-light">
-            Catatan: Harga exclude tol, parkir, kuli bongkar (jika ada). Armada standby Palembang • Jakarta • Surabaya. Luar area call admin.
+            Catatan: Harga exclude tol, parkir, bongkar muat (jika ada). Armada standby Palembang • Jakarta • Surabaya.
           </div>
         </div>
       </div>
@@ -134,8 +134,8 @@
                 </div>
                 <a href="https://wa.me/{{ $whatsapp }}?text={{ $waText }}" target="_blank" rel="noopener"
                    class="bg-bm-yellow text-bm-black px-4 py-2.5 font-display font-bold uppercase text-[10px] leading-tight tracking-wide hover:bg-bm-yellow-dark whitespace-nowrap text-center shadow-sm"
-                   title="Nego dengan Admin Sampai Jadi!">
-                  Nego dengan Admin<br>Sampai Jadi! →
+                   title="Info Harga via WA">
+                  Info Harga →
                 </a>
               </div>
             </div>
@@ -144,7 +144,7 @@
       </div>
 
       <div class="mt-10 grid lg:grid-cols-[auto_1fr_auto] gap-4 items-center bg-bm-black text-white px-5 py-4 border border-white/10">
-        <div class="font-mono text-[11px] uppercase tracking-widest text-bm-yellow">Perlu armada custom / overload?</div>
+        <div class="font-mono text-[11px] uppercase tracking-widest text-bm-yellow">Butuh armada khusus?</div>
         <div class="h-px lg:h-auto lg:w-px bg-white/10 lg:self-stretch"></div>
         <a href="https://wa.me/{{ $whatsapp }}?text={{ $waMessage }}" target="_blank" class="inline-flex justify-center bg-bm-red px-5 py-2.5 font-display uppercase text-[12px] font-bold hover:bg-bm-red-dark">Konsultasi via WhatsApp →</a>
       </div>

@@ -22,6 +22,7 @@
       <a href="{{ route('admin.armada.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase {{ request()->routeIs('admin.armada.*')?'bg-bm-yellow text-bm-black font-bold':'text-bm-white/60 hover:text-white border border-bm-yellow/20' }}">Armada & Harga</a>
       <a href="{{ route('admin.articles.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-white/60 hover:text-white">Artikel</a>
       <a href="{{ route('admin.gallery.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-white/60 hover:text-white">Galeri</a>
+      <a href="{{ route('admin.partners.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-white/60 hover:text-white">Partner & Klien</a>
       <a href="{{ route('admin.messages.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-white/60 hover:text-white">Pesan Masuk</a>
       <div class="h-px bg-white/5 my-3"></div>
       @if(auth('admin')->user()?->isSuperAdmin())

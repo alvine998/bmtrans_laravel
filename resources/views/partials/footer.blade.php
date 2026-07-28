@@ -29,10 +29,10 @@
           </div>
         </div>
         <p class="mt-4 text-[13px] leading-relaxed text-bm-gray-light max-w-[34ch]">
-          Logistic Express terpercaya sejak 2010. Armada truk berat, kontainer, dan gudang distribusi dengan jangkauan Sumatera–Jawa–Bali–Kalimantan.
+          Jasa logistik dan transportasi terpercaya sejak 2010. Armada lengkap dari pickup hingga tronton dengan jangkauan Sumatera–Jawa–Bali–Kalimantan.
         </p>
         <div class="mt-6 flex gap-2">
-          <span class="px-3 py-1 bg-bm-yellow text-bm-black font-mono text-[10px] uppercase tracking-widest font-bold">ISO 9001</span>
+          <span class="px-3 py-1 bg-bm-yellow text-bm-black font-mono text-[10px] uppercase tracking-widest font-bold">TERPERCAYA</span>
           <span class="px-3 py-1 border border-white/10 font-mono text-[10px] uppercase tracking-widest">SIUP • TDP • NPWP</span>
         </div>
         @php
@@ -68,7 +68,7 @@
           @foreach($services as $s)
             <li><a href="{{ route('layanan.show', $s->slug) }}" class="text-[14px] text-bm-white/70 hover:text-bm-yellow hover:pl-1 transition-all">{{ $s->title }}</a></li>
           @endforeach
-          <li><a href="{{ route('armada.index') }}" class="text-[14px] text-bm-white/70 hover:text-bm-yellow hover:pl-1 transition-all">Armada & Harga Mulai 200rb</a></li>
+          <li><a href="{{ route('armada.index') }}" class="text-[14px] text-bm-white/70 hover:text-bm-yellow hover:pl-1 transition-all">Armada & Harga</a></li>
           <li class="pt-2"><a href="{{ route('layanan.index') }}" class="font-mono text-[11px] uppercase tracking-widest text-bm-yellow">Index Layanan →</a></li>
         </ul>
       </div>
@@ -79,7 +79,7 @@
         <ul class="space-y-2 text-[14px] text-bm-white/70">
           <li><a href="{{ route('about') }}" class="hover:text-bm-white">Tentang Kami & Legalitas</a></li>
           <li><a href="{{ route('gallery') }}" class="hover:text-bm-white">Galeri Armada & Gudang</a></li>
-          <li><a href="{{ route('articles.index') }}" class="hover:text-bm-white">Artikel Logistik</a></li>
+          <li><a href="{{ route('articles.index') }}" class="hover:text-bm-white">Artikel & Insight</a></li>
           <li><a href="{{ route('contact') }}" class="hover:text-bm-white">Hubungi & Cabang</a></li>
         </ul>
         <div class="mt-6 p-3 bg-bm-black border border-bm-yellow/20">
@@ -91,18 +91,18 @@
       </div>
 
       {{-- CTA --}}
-      <div class="bg-bm-black border border-white/10 p-5 clip-notch">
-        <div class="label-industrial">Butuh penawaran cepat?</div>
-        <h3 class="mt-2 font-display font-black text-[28px] leading-[0.9] uppercase">Kirim rute <br><span class="text-bm-red">Anda hari ini</span></h3>
-        <p class="mt-3 text-[13px] text-bm-gray-light">Dapatkan estimasi biaya & waktu tempuh dalam 2 jam kerja.</p>
+      <div class="bg-bm-black border border-white/10 p-5">
+        <div class="label-industrial">Butuh bantuan?</div>
+        <h3 class="mt-2 font-display font-black text-[28px] leading-[0.9] uppercase">Hubungi kami<br><span class="text-bm-red">sekarang</span></h3>
+        <p class="mt-3 text-[13px] text-bm-gray-light">Tim kami siap bantu kebutuhan logistik Anda.</p>
         <a href="{{ route('contact') }}" class="mt-5 inline-flex w-full justify-between items-center bg-bm-red px-4 py-3 font-display font-bold uppercase text-[13px] hover:bg-bm-red-dark">
-          <span>Minta Penawaran</span>
+          <span>Hubungi Kami</span>
           <span>→</span>
         </a>
         <div class="mt-4 flex gap-2 font-mono text-[10px]">
-          <span class="px-2 py-1 bg-bm-yellow/10 text-bm-yellow border border-bm-yellow/20">TRUCKING</span>
-          <span class="px-2 py-1 bg-white/5">SEA FREIGHT</span>
-          <span class="px-2 py-1 bg-white/5">WAREHOUSE</span>
+          <span class="px-2 py-1 bg-bm-yellow/10 text-bm-yellow border border-bm-yellow/20">DARAT</span>
+          <span class="px-2 py-1 bg-white/5">LAUT</span>
+          <span class="px-2 py-1 bg-white/5">GUDANG</span>
         </div>
       </div>
     </div>
@@ -113,10 +113,10 @@
       <div class="flex flex-wrap gap-4">
         <a href="/sitemap.xml" class="hover:text-bm-white">Sitemap</a>
         <a href="/robots.txt" class="hover:text-bm-white">Robots</a>
-        <span>Built with industrial precision • Laravel 13 • No Vite</span>
+        <span>PT Berkah Makmur Transport — Jasa Logistik & Transportasi Indonesia</span>
       </div>
       <div class="flex items-center gap-2">
-        <span class="w-2 h-2 bg-green-500 rounded-full"></span> Sistem pelacakan aktif • {{ \App\Models\SiteSetting::getValue('stats.total_shipments','12.000+') }} pengiriman
+        <span class="w-2 h-2 bg-green-500 rounded-full"></span> Operasional 24/7 • {{ \App\Models\SiteSetting::getValue('stats.total_shipments','12.000+') }} pengiriman
       </div>
     </div>
   </div>

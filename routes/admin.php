@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ArmadaController as AdminArmadaController;
 use App\Http\Controllers\Admin\ContactMessageController as AdminMessageController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
+use App\Http\Controllers\Admin\PartnerController as AdminPartnerController;
 use App\Http\Controllers\Admin\PageController as AdminPageController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\SiteSettingController as AdminSettingController;
@@ -41,6 +42,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/pages', [AdminPageController::class, 'index'])->name('pages.index');
         Route::get('/pages/{page}/edit', [AdminPageController::class, 'edit'])->name('pages.edit');
         Route::put('/pages/{page}', [AdminPageController::class, 'update'])->name('pages.update');
+
+        // Partners
+        Route::resource('partners', AdminPartnerController::class)->except(['show']);
 
         // Settings
         Route::get('/settings', [AdminSettingController::class, 'index'])->name('settings.index');

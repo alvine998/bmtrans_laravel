@@ -7,8 +7,8 @@
 
       <div>
         <div class="font-mono text-[11px] uppercase tracking-widest text-bm-red font-bold">Hubungi Kami</div>
-        <h1 class="mt-3 font-display font-black text-[44px] sm:text-[60px] leading-[0.85] uppercase">Kirim rute,<br>kami hitung cepat.</h1>
-        <p class="mt-4 max-w-[48ch] text-[15px] leading-relaxed opacity-70">Isi form di samping, atau hubungi dispatch. Jawab <strong>max 2 jam kerja</strong> (06:00–20:00 WIB). Di luar jam, WA tetap dibaca pagi.</p>
+        <h1 class="mt-3 font-display font-black text-[44px] sm:text-[60px] leading-[0.85] uppercase">Butuh bantuan<br>logistik?</h1>
+        <p class="mt-4 max-w-[48ch] text-[15px] leading-relaxed opacity-70">Isi form di samping atau hubungi tim kami. Kami siap bantu jawab pertanyaan Anda dan memberikan penawaran terbaik.</p>
 
         <div class="mt-8 space-y-4">
           <div class="border border-bm-black/10 p-5">
@@ -24,7 +24,7 @@
       </div>
 
       <div class="bg-bm-black-soft border border-white/10 text-white p-6 sm:p-8">
-        <div class="label-industrial">Form penawaran</div>
+        <div class="label-industrial">Kirim Pesan</div>
 
         @if(session('success'))
           <div class="mt-4 bg-green-500/10 border border-green-500/30 p-3 text-[14px] text-green-200">{{ session('success') }}</div>
@@ -64,12 +64,12 @@
           </div>
 
           <div>
-            <label class="font-mono text-[11px] uppercase">Detail rute & muatan *</label>
-            <textarea name="message" rows="6" required class="mt-1 w-full bg-bm-black border border-white/10 px-3 py-2.5 text-[14px]" placeholder="Contoh: Dari Palembang ke Surabaya, 18 ton pupuk, butuh Fuso, tanggal muat 26 Jul...">{{ old('message') }}</textarea>
+            <label class="font-mono text-[11px] uppercase">Pesan *</label>
+            <textarea name="message" rows="6" required class="mt-1 w-full bg-bm-black border border-white/10 px-3 py-2.5 text-[14px]" placeholder="Tulis pesan Anda di sini...">{{ old('message') }}</textarea>
           </div>
 
-          <button type="submit" class="w-full bg-bm-red px-6 py-3.5 font-display font-bold uppercase text-[13px] tracking-wide hover:bg-bm-red-dark">Kirim — estimasi 2 jam →</button>
-          <div class="font-mono text-[10px] text-bm-gray-light">Dengan mengirim, Anda setuju dihubungi via WA/telp untuk penawaran. Data tidak dijual.</div>
+          <button type="submit" class="w-full bg-bm-red px-6 py-3.5 font-display font-bold uppercase text-[13px] tracking-wide hover:bg-bm-red-dark">Kirim Pesan →</button>
+          <div class="font-mono text-[10px] text-bm-gray-light">Kami akan merespon pesan Anda secepatnya. Data Anda aman.</div>
         </form>
       </div>
     </div>
