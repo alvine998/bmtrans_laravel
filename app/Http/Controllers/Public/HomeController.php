@@ -10,7 +10,6 @@ use App\Models\Page;
 use App\Models\Partner;
 use App\Models\Service;
 use App\Models\SiteSetting;
-use App\Models\TeamMember;
 use App\Models\Testimonial;
 
 class HomeController extends Controller
@@ -22,7 +21,6 @@ class HomeController extends Controller
         $testimonials = Testimonial::active()->orderBy('order')->take(6)->get();
         $articles = Article::published()->with('category')->latest('published_at')->take(3)->get();
         $gallery = GalleryItem::active()->orderBy('order')->take(8)->get();
-        $team = TeamMember::where('is_active', true)->orderBy('order')->take(4)->get();
         $partners = Partner::active()->ordered()->get();
         $page = Page::where('slug','beranda')->first();
 
@@ -32,7 +30,7 @@ class HomeController extends Controller
         $seoDescription = $page?->seo_description
             ?? SiteSetting::getValue('seo.home_description', 'Jasa logistik dan transportasi Indonesia sejak 2010. Armada lengkap, GPS real-time, asuransi penuh. Hubungi untuk penawaran terbaik.');
 
-        return view('home.index', compact('services', 'armadas', 'testimonials', 'articles', 'gallery', 'page', 'team', 'partners'), [
+        return view('home.index', compact('services', 'armadas', 'testimonials', 'articles', 'gallery', 'page', 'partners'), [
             'seoTitle' => $seoTitle,
             'seoDescription' => $seoDescription,
             'canonical' => route('home'),

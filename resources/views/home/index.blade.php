@@ -5,7 +5,7 @@
 <section class="relative overflow-hidden bg-bm-black">
   <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px); background-size: 80px 80px;"></div>
 
-  <div class="parallax-container relative">
+  <div class="relative">
     <div data-parallax="0.2" class="pointer-events-none absolute top-10 left-0 right-0 font-display font-black text-[18vw] leading-[0.8] text-white/[0.02] uppercase tracking-tighter select-none hidden lg:block">
       DARAT & LAUT<br>INDONESIA
     </div>
@@ -116,46 +116,6 @@
         </div>
       </div>
       @endif
-    </div>
-  </div>
-</section>
-
-{{-- STRUKTUR PERUSAHAAN --}}
-<section class="py-16 lg:py-20 bg-bm-black">
-  <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-    <div class="label-industrial">Struktur Perusahaan</div>
-    <h2 class="mt-3 font-display font-black text-[36px] sm:text-[48px] leading-[0.85] uppercase">
-      Dewan Pengurus<br><span class="text-bm-yellow">PT BMT</span>
-    </h2>
-    <p class="mt-3 text-[14px] text-bm-white/60 max-w-[56ch]">Informasi resmi dewan pengurus PT Berkah Makmur Transport.</p>
-
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      @forelse($team->take(4) as $member)
-        <div class="bg-bm-black-soft border border-white/10 p-6 text-center">
-          <div class="w-20 h-20 mx-auto bg-bm-black-light border border-white/10 flex items-center justify-center font-display font-black text-[28px] text-bm-yellow">
-            {{ Str::substr($member->name,0,1) }}
-          </div>
-          <div class="mt-4 font-mono text-[11px] uppercase tracking-widest text-bm-gray-light">{{ $member->position }}</div>
-          <div class="mt-1 font-display font-bold uppercase text-[18px]">{{ $member->name }}</div>
-          @if($member->bio)
-            <p class="mt-2 text-[12px] text-bm-white/60 leading-relaxed line-clamp-2">{{ $member->bio }}</p>
-          @endif
-        </div>
-      @empty
-        @foreach([
-          ['Direktur Utama', 'Alvie Yoga'],
-          ['Direktur', 'Budi Santoso'],
-          ['Koordinator Lapangan', 'Rudi Hermawan'],
-          ['Administrator', 'Siti Rahma'],
-        ] as $pos => $d)
-          <div class="bg-bm-black-soft border border-white/10 p-6 text-center">
-            <div class="w-20 h-20 mx-auto bg-bm-black-light border border-white/10 flex items-center justify-center font-display font-black text-[28px] text-bm-yellow">{{ Str::substr($d[1],0,1) }}</div>
-            <div class="mt-4 font-mono text-[11px] uppercase tracking-widest text-bm-gray-light">{{ $d[0] }}</div>
-            <div class="mt-1 font-display font-bold uppercase text-[18px]">{{ $d[1] }}</div>
-            <p class="mt-2 text-[12px] text-bm-white/60 leading-relaxed">Memimpin arah strategis perusahaan dan pengembangan bisnis.</p>
-          </div>
-        @endforeach
-      @endforelse
     </div>
   </div>
 </section>

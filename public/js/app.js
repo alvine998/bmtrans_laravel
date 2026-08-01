@@ -57,7 +57,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !pref
       yPercent: speed * -100,
       ease: 'none',
       scrollTrigger: {
-        trigger: el.closest('.parallax-container') || el,
+        trigger: el,
         start: 'top bottom',
         end: 'bottom top',
         scrub: true
