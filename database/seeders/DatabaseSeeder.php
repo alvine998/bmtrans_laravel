@@ -93,7 +93,7 @@ class DatabaseSeeder extends Seeder
             'hero_title_2' => 'tidak boleh',
             'hero_title_3' => 'bermain-',
             'hero_title_4' => 'main.',
-            'hero_subtitle' => 'Kami mengangkut muatan industri berat, kontainer 40ft, dan distribusi FMCG dengan 120+ armada GPS, asuransi all-risk, dan SOP muat-bongkar yang disiplin.',
+            'hero_subtitle' => 'Kami mengangkut muatan industri berat dan distribusi FMCG dengan 120+ armada GPS, asuransi all-risk, dan SOP muat-bongkar yang disiplin.',
             'hero_cta_primary' => 'Dapat Penawaran 2 Jam',
             'hero_cta_secondary' => 'Lihat Armada',
             'hero_badge_1' => '12.847 pengiriman selesai',

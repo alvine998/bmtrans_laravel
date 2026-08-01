@@ -17,7 +17,7 @@
       </div>
       <div>
         <label class="font-mono text-[10px] uppercase text-bm-gray-light">{{ $editable['hero_subtitle'] }}</label>
-        <textarea name="sections[hero_subtitle]" rows="3" class="mt-1 w-full bg-bm-black-soft border border-white/10 px-3 py-2 text-[13px]">{{ old('sections.hero_subtitle', $s['hero_subtitle'] ?? 'Kami mengangkut muatan industri berat, kontainer 40ft, dan distribusi FMCG dengan 120+ armada GPS, asuransi all-risk, dan SOP muat-bongkar yang disiplin.') }}</textarea>
+        <textarea name="sections[hero_subtitle]" rows="3" class="mt-1 w-full bg-bm-black-soft border border-white/10 px-3 py-2 text-[13px]">{{ old('sections.hero_subtitle', $s['hero_subtitle'] ?? 'Kami mengangkut muatan industri berat dan distribusi FMCG dengan 120+ armada GPS, asuransi all-risk, dan SOP muat-bongkar yang disiplin.') }}</textarea>
       </div>
     </div>
 
