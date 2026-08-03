@@ -212,4 +212,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // Copy year
   const y = document.getElementById('current-year');
   if (y) y.textContent = String(new Date().getFullYear());
+
+  // Fraud warning modal — tampil setiap refresh halaman
+  const fraudModal = document.getElementById('fraud-modal');
+  const fraudClose = document.getElementById('fraud-close');
+  const fraudCloseX = document.getElementById('fraud-close-x');
+  const fraudBackdrop = document.getElementById('fraud-backdrop');
+
+  function openFraudModal() {
+    if (!fraudModal) return;
+    fraudModal.classList.remove('hidden');
+    fraudModal.classList.add('flex');
+    document.body.classList.add('overflow-hidden');
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => fraudModal.classList.add('fraud-open'));
+    });
+  }
+  function closeFraudModal() {
+    if (!fraudModal) return;
+    fraudModal.classList.remove('fraud-open');
+    document.body.classList.remove('overflow-hidden');
+    setTimeout(() => {
+      fraudModal.classList.add('hidden');
+      fraudModal.classList.remove('flex');
+    }, 350);
+  }
+
+  if (fraudModal) {
+    if (fraudClose) fraudClose.addEventListener('click', closeFraudModal);
+    if (fraudCloseX) fraudCloseX.addEventListener('click', closeFraudModal);
+    if (fraudBackdrop) fraudBackdrop.addEventListener('click', closeFraudModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !fraudModal.classList.contains('hidden')) closeFraudModal();
+    });
+    setTimeout(openFraudModal, 700);
+  }
 });

@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Armada;
 use App\Models\ArticleCategory;
 use App\Models\Page;
+use App\Models\Partner;
 use App\Models\Service;
 use App\Models\SiteSetting;
 use Illuminate\Database\Seeder;
@@ -195,6 +196,22 @@ class DatabaseSeeder extends Seeder
                 ['name' => $t['name']],
                 array_merge($t, ['is_active' => true])
             );
+        }
+
+        // Partners
+        $partners = [
+            ['name' => 'Shopee', 'order' => 1],
+            ['name' => 'J&T Express', 'order' => 2],
+            ['name' => 'Mr.DIY', 'order' => 3],
+            ['name' => 'PT. Tifyco', 'order' => 4],
+            ['name' => 'Lazada', 'order' => 5],
+            ['name' => 'Kubikasi', 'order' => 6],
+            ['name' => 'PT. GAS', 'order' => 7],
+        ];
+        foreach ($partners as $p) {
+            Partner::firstOrCreate(['name' => $p['name']], array_merge($p, [
+                'is_active' => true,
+            ]));
         }
 
         $this->call(ArticleSeeder::class);

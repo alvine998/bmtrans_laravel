@@ -85,41 +85,6 @@
   </div>
 </section>
 
-{{-- TENTANG KAMI --}}
-<section id="about" class="py-16 lg:py-20 bg-bm-cream border-y border-bm-dark/5">
-  <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
-      <div>
-        <div class="label-industrial">Tentang Kami</div>
-        <h2 class="mt-3 font-display font-black text-[36px] sm:text-[48px] leading-[0.85] uppercase">
-          Logistik &<br>transportasi<br><span class="text-bm-yellow">terpercaya.</span>
-        </h2>
-        <p class="mt-4 text-[15px] leading-relaxed text-bm-dark/80 max-w-[48ch]">
-          PT Berkah Makmur Transport adalah penyedia jasa logistik dan transportasi yang berfokus pada ketepatan waktu, keandalan, dan transparansi biaya. Kami melayani pengiriman antarkota dan antar pulau untuk segmen B2B dan UMKM di seluruh Indonesia.
-        </p>
-        <a href="{{ route('about') }}" class="mt-6 inline-flex border border-bm-dark/15 px-5 py-3 font-display font-bold uppercase text-[13px] hover:bg-bm-dark hover:text-bm-cream">Selengkapnya →</a>
-      </div>
-
-      @if($partners->isNotEmpty())
-      <div>
-        <div class="font-mono text-[11px] uppercase tracking-widest text-bm-gray-light mb-4">Partner & Klien</div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          @foreach($partners as $p)
-            <div class="border border-bm-dark/10 p-4 flex items-center justify-center bg-bm-cream-soft">
-              @if($p->logo)
-                <img src="{{ asset('storage/'.$p->logo) }}" alt="{{ $p->name }}" class="max-h-10 object-contain">
-              @else
-                <span class="font-display font-bold text-[14px] uppercase text-bm-gray-light text-center leading-tight">{{ Str::of($p->name)->limit(20) }}</span>
-              @endif
-            </div>
-          @endforeach
-        </div>
-      </div>
-      @endif
-    </div>
-  </div>
-</section>
-
 {{-- ARMADA teaser --}}
 @php
   $waAll = \App\Models\SiteSetting::getValue('contact.whatsapp','6281234567890');
@@ -257,6 +222,50 @@
     </div>
   </div>
 </section>
+
+{{-- PARTNER & KLIEN --}}
+@if($partners->isNotEmpty())
+<section class="py-16 lg:py-20 bg-bm-cream border-y border-bm-dark/5 overflow-hidden">
+  <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 mb-10">
+    <div class="text-center">
+      <div class="label-industrial justify-center">Partner & Klien</div>
+      <h2 class="mt-3 font-display font-black text-[36px] sm:text-[48px] leading-[0.85] uppercase">
+        Dipercaya oleh<br><span class="text-bm-yellow">brand nasional.</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="relative">
+    <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-bm-cream to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-bm-cream to-transparent z-10 pointer-events-none"></div>
+
+    <div class="flex animate-marquee w-max">
+      @foreach($partners as $p)
+        <div class="flex-shrink-0 w-[180px] mx-3">
+          <div class="bg-bm-cream-soft border border-bm-dark/10 h-[80px] flex items-center justify-center hover:border-bm-yellow/40 transition-colors">
+            @if($p->logo)
+              <img src="{{ asset('storage/'.$p->logo) }}" alt="{{ $p->name }}" class="max-h-10 object-contain px-4">
+            @else
+              <span class="font-display font-bold text-[15px] uppercase text-bm-gray-light text-center leading-tight px-4">{{ $p->name }}</span>
+            @endif
+          </div>
+        </div>
+      @endforeach
+      @foreach($partners as $p)
+        <div class="flex-shrink-0 w-[180px] mx-3">
+          <div class="bg-bm-cream-soft border border-bm-dark/10 h-[80px] flex items-center justify-center hover:border-bm-yellow/40 transition-colors">
+            @if($p->logo)
+              <img src="{{ asset('storage/'.$p->logo) }}" alt="{{ $p->name }}" class="max-h-10 object-contain px-4">
+            @else
+              <span class="font-display font-bold text-[15px] uppercase text-bm-gray-light text-center leading-tight px-4">{{ $p->name }}</span>
+            @endif
+          </div>
+        </div>
+      @endforeach
+    </div>
+  </div>
+</section>
+@endif
 
 {{-- GALERI / AKTIVITAS LAPANGAN --}}
 @if($gallery->isNotEmpty())

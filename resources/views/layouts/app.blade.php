@@ -46,6 +46,9 @@
   {{-- Sticky WhatsApp — Beranda + all public pages (can gate with @if(Route::is('home')) if needed) --}}
   @include('partials.whatsapp-float')
 
+  {{-- Modal peringatan penipuan --}}
+  @include('partials.fraud-modal')
+
   {{-- Footer --}}
   @include('partials.footer')
 

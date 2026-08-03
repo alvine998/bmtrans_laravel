@@ -18,7 +18,7 @@ class HomeController extends Controller
     {
         $services = Service::active()->ordered()->take(4)->get();
         $armadas = Armada::active()->ordered()->take(12)->get();
-        $testimonials = Testimonial::active()->orderBy('order')->take(6)->get();
+        $testimonials = Testimonial::active()->orderBy('order')->take(10)->get();
         $articles = Article::published()->with('category')->latest('published_at')->take(3)->get();
         $gallery = GalleryItem::active()->orderBy('order')->take(8)->get();
         $partners = Partner::active()->ordered()->get();
@@ -30,7 +30,7 @@ class HomeController extends Controller
         $seoDescription = $page?->seo_description
             ?? SiteSetting::getValue('seo.home_description', 'Jasa logistik dan transportasi Indonesia sejak 2017. Armada lengkap, GPS real-time, asuransi penuh. Hubungi untuk penawaran terbaik.');
 
-        return view('home.index', compact('services', 'armadas', 'testimonials', 'articles', 'gallery', 'page', 'partners'), [
+        return view('home.index', compact('services', 'armadas', 'testimonials', 'articles', 'gallery', 'partners', 'page'), [
             'seoTitle' => $seoTitle,
             'seoDescription' => $seoDescription,
             'canonical' => route('home'),

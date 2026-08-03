@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 800" preserveAspectRatio="xMidYMid slice" width="500" height="800" role="img" aria-label="Ilustrasi hati-hati penipuan">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26211D"/>
+      <stop offset="0.55" stop-color="#1C1917"/>
+      <stop offset="1" stop-color="#141210"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.55">
+      <stop offset="0" stop-color="#D62828" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#D62828" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="haz" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="60" height="60" fill="#F4C430"/>
+      <rect width="60" height="30" fill="#1C1917"/>
+    </pattern>
+  </defs>
+
+  <rect width="500" height="800" fill="url(#sky)"/>
+
+  <!-- container yard horizon -->
+  <g fill="#F5F0E8" opacity="0.10">
+    <rect x="20" y="352" width="96" height="36"/>
+    <rect x="124" y="352" width="96" height="36"/>
+    <rect x="72" y="316" width="96" height="36"/>
+    <rect x="176" y="352" width="96" height="36"/>
+    <rect x="300" y="352" width="96" height="36"/>
+    <rect x="404" y="352" width="76" height="36"/>
+    <rect x="352" y="316" width="96" height="36"/>
+    <rect x="248" y="316" width="96" height="36"/>
+  </g>
+
+  <!-- alert glow -->
+  <rect width="500" height="800" fill="url(#glow)"/>
+
+  <!-- dotted route -->
+  <path d="M-10 470 C120 440 200 500 340 462 S480 420 510 430" fill="none" stroke="#F4C430" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- warning triangle -->
+  <g>
+    <path d="M250 158 L396 430 L104 430 Z" fill="#D62828" stroke="#F4C430" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M250 186 L372 414 L128 414 Z" fill="none" stroke="#A31E1E" stroke-width="3" stroke-linejoin="round" opacity="0.6"/>
+    <rect x="237" y="248" width="26" height="96" rx="13" fill="#F5F0E8"/>
+    <circle cx="250" cy="384" r="16" fill="#F5F0E8"/>
+  </g>
+
+  <!-- road -->
+  <path d="M0 580 L500 536 L500 800 L0 800 Z" fill="#17140F"/>
+  <path d="M0 588 L500 544" stroke="#F5F0E8" stroke-width="4" opacity="0.25" fill="none"/>
+  <path d="M0 690 L500 646" stroke="#F4C430" stroke-width="6" stroke-dasharray="30 24" opacity="0.75" fill="none"/>
+
+  <!-- truck -->
+  <g fill="#F5F0E8">
+    <path d="M60 646 h190 v54 h-190 z"/>
+    <path d="M250 646 h46 l36 32 v22 h-82 z"/>
+    <path d="M256 652 h36 l26 22 h-62 z" fill="#1C1917"/>
+  </g>
+  <g fill="#1C1917">
+    <circle cx="116" cy="714" r="22"/>
+    <circle cx="296" cy="714" r="22"/>
+  </g>
+  <g fill="#F5F0E8">
+    <circle cx="116" cy="714" r="9"/>
+    <circle cx="296" cy="714" r="9"/>
+  </g>
+  <!-- headlight beam -->
+  <path d="M332 668 L470 636 L470 716 Z" fill="#F4C430" opacity="0.18"/>
+  <circle cx="330" cy="678" r="7" fill="#F4C430" opacity="0.9"/>
+
+  <!-- corner hazard accents -->
+  <path d="M0 0 L200 0 L0 132 Z" fill="url(#haz)" opacity="0.85"/>
+  <path d="M500 0 L500 100 L420 0 Z" fill="url(#haz)" opacity="0.5"/>
+
+  <!-- bottom band -->
+  <rect y="740" width="500" height="60" fill="#D62828"/>
+  <text x="250" y="778" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="23" fill="#F5F0E8" letter-spacing="4">HATI-HATI PENIPUAN</text>
+</svg>
