@@ -164,12 +164,13 @@
       Cakupan layanan<br><span class="text-bm-yellow">seluruh Indonesia.</span>
     </h2>
 
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
       @foreach([
         ['Sumatera', 'Palembang, Lampung, Medan, Pekanbaru, Padang, Jambi, Bengkulu'],
         ['Jawa', 'Jakarta, Bandung, Semarang, Surabaya, Yogyakarta, Malang'],
         ['Kalimantan', 'Pontianak, Banjarmasin, Balikpapan, Samarinda'],
         ['Bali & Nusa', 'Denpasar, Mataram, seluruh Bali'],
+        ['Lainnya', 'Sulawesi, Maluku, Papua, NTT, NTB — seluruh Indonesia'],
       ] as $area)
         <div class="bg-bm-cream-soft border border-bm-dark/10 p-6">
           <div class="font-display font-black text-[24px] uppercase text-bm-yellow">{{ $area[0] }}</div>
@@ -178,7 +179,7 @@
       @endforeach
     </div>
     <div class="mt-4 bg-bm-cream-soft border border-bm-dark/10 p-4 font-mono text-[12px] text-bm-gray-light text-center">
-      Jabodetabek, Bandung, Jawa, Sumatera, Kalimantan, Sulawesi, Bali — Klik <a href="{{ route('contact') }}" class="text-bm-yellow underline">Hubungi Kami</a> untuk detail cakupan area spesifik.
+      Seluruh Indonesia — Sumatera, Jawa, Kalimantan, Sulawesi, Bali, Nusa Tenggara, Maluku, Papua. Klik <a href="{{ route('contact') }}" class="text-bm-yellow underline">Hubungi Kami</a> untuk detail cakupan area spesifik.
     </div>
   </div>
 </section>

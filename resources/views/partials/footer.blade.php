@@ -29,7 +29,7 @@
           </div>
         </div>
         <p class="mt-4 text-[13px] leading-relaxed text-bm-gray-light max-w-[34ch]">
-          Jasa logistik dan transportasi terpercaya sejak 2017. Armada lengkap dari pickup hingga tronton dengan jangkauan Sumatera–Jawa–Bali–Kalimantan.
+          Jasa logistik dan transportasi terpercaya sejak 2017. Armada lengkap dari pickup hingga tronton dengan jangkauan seluruh Indonesia.
         </p>
         <div class="mt-6 flex gap-2">
           <span class="px-3 py-1 bg-bm-yellow text-bm-dark font-mono text-[10px] uppercase tracking-widest font-bold">TERPERCAYA</span>
