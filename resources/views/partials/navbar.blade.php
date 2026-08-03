@@ -39,8 +39,10 @@
           <div class="w-10 h-10 bg-bm-red flex items-center justify-center font-display font-black text-xl leading-none group-hover:bg-bm-yellow group-hover:text-bm-dark transition-colors">BM</div>
         @endif
         <div class="leading-[0.9]">
-          <div class="font-display font-black text-[18px] sm:text-[20px] uppercase tracking-tight">PT Berkah Makmur</div>
-          <div class="font-mono text-[9px] uppercase tracking-[0.25em] text-bm-yellow">Transport • EST 2017</div>
+          <div class="flex items-center gap-2">
+            <span class="text-[18px] sm:text-[20px] uppercase tracking-tight" style="font-family:'Poppins',sans-serif;font-weight:600">PT Berkah Makmur</span>
+          </div>
+          <div class="mt-1 font-mono text-[9px] uppercase tracking-[0.25em] text-bm-yellow">Transport • EST 2017</div>
         </div>
       </a>
 

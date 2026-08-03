@@ -24,8 +24,8 @@
             <div class="w-12 h-12 bg-bm-red flex items-center justify-center font-display font-black text-xl">BM</div>
           @endif
           <div class="leading-[0.9]">
-            <div class="font-display font-black text-[20px] uppercase">PT Berkah Makmur</div>
-            <div class="font-display font-black text-[20px] uppercase -mt-1 text-bm-yellow">Transport</div>
+            <div class="text-[20px] uppercase leading-none" style="font-family:'Poppins',sans-serif;font-weight:400">PT Berkah Makmur</div>
+            <div class="text-[20px] uppercase -mt-0.5 text-bm-yellow" style="font-family:'Poppins',sans-serif;font-weight:400">Transport</div>
           </div>
         </div>
         <p class="mt-4 text-[13px] leading-relaxed text-bm-gray-light max-w-[34ch]">
