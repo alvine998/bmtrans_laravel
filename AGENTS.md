@@ -10,7 +10,7 @@ This file is the operating manual for any AI coding agent (Claude Code, Copilot 
 
 A corporate profile + blog + light CMS website for **PT. Berkah Makmur Transport**, an Indonesian logistics/freight/trucking company. The site must feel premium, industrial, and trustworthy — not like a templated SaaS landing page. It needs smooth-scroll storytelling (Lenis + GSAP + parallax), a small admin panel for non-technical staff to edit content, and strong SEO/performance since this is a lead-generation site for a logistics business.
 
-**Brand identity:** Black, Red, Yellow — industrial/transport palette (think warning stripes, freight containers, road signage), NOT a tech-startup palette (no purple/blue gradients, no glassmorphism, no generic SaaS look).
+**Brand identity:** Cream, Red, Yellow — warm industrial/transport palette with a cream dominant base (think premium logistics branding, freight containers, road signage), NOT a tech-startup palette (no purple/blue gradients, no glassmorphism, no generic SaaS look).
 
 ---
 
@@ -49,23 +49,23 @@ The single biggest risk on this project is producing a generic-looking AI-genera
 
 Instead, build toward:
 
-- ✅ **Industrial/transport visual language**: diagonal cuts (clip-path), warning-stripe accents (black/yellow diagonal bands), asphalt/route-line textures, container-yard grid motifs, custom truck/route SVG illustrations (not stock icon packs).
+- ✅ **Industrial/transport visual language**: diagonal cuts (clip-path), warning-stripe accents (cream/yellow diagonal bands), asphalt/route-line textures, container-yard grid motifs, custom truck/route SVG illustrations (not stock icon packs).
 - ✅ **Typography with character**: pair a bold condensed/industrial display face (e.g. self-hosted "Archivo Black", "Bebas Neue", or "Oswald") for headings with a clean readable body face (e.g. "Inter" or "Public Sans") — self-hosted, not loaded from Google Fonts CDN (performance + no external request).
 - ✅ **Asymmetric grid layouts**, overlapping image + content blocks, offset section dividers using SVG clip-paths shaped like road markings or container edges.
 - ✅ **Parallax storytelling**: hero background layers (road, horizon, truck silhouette) moving at different scroll speeds via GSAP + Lenis.
 - ✅ **Motion with restraint**: entrance animations on scroll (fade+slide, clip reveal), not everything spinning/bouncing.
-- ✅ **Color discipline**: Black as dominant base (backgrounds, headers, footer), Red as primary CTA/accent (buttons, links, highlights, active states), Yellow as secondary accent (small highlights, underlines, icon accents, hazard-stripe details) — never all three competing in one element.
+- ✅ **Color discipline**: Cream as dominant base (backgrounds, headers, footer), Red as primary CTA/accent (buttons, links, highlights, active states), Yellow as secondary accent (small highlights, underlines, icon accents, hazard-stripe details) — never all three competing in one element.
 
 Example palette (agent may refine but must stay within this family):
 
 ```
---color-black:        #0B0B0C   /* near-black, not pure #000 for less harsh contrast */
---color-black-soft:    #17181A
+--color-cream:         #F5F0E8   /* warm cream, primary base */
+--color-cream-light:   #FAF7F2   /* lighter cream for headers/hero */
 --color-red:           #D62828   /* primary CTA / brand red */
 --color-red-dark:      #A31E1E
 --color-yellow:        #F4C430   /* accent yellow, road-sign yellow, not neon */
 --color-yellow-dark:   #C79A1E
---color-white:         #F7F7F5   /* off-white for text on dark, not pure white */
+--color-dark:          #1C1917   /* dark text, near-black for contrast */
 --color-gray:          #6B6E73
 ```
 
@@ -274,7 +274,7 @@ tailwind.config.js
 ## 12. Auth & Roles
 
 - Separate guard `admin` (own `admins` or `users` table with `role` column) distinct from any future customer-facing auth.
-- Admin login page styled on-brand (black/red/yellow), NOT the default Laravel Breeze scaffold look.
+- Admin login page styled on-brand (cream/red/yellow), NOT the default Laravel Breeze scaffold look.
 - Roles: `super_admin` (full CMS access incl. user management/settings) and `editor` (content only: services, articles, gallery, testimonials, messages — no settings/user management).
 - Rate-limit login attempts, CSRF protection on all forms (Laravel default), sanitize all rich-text input server-side before persisting.
 
@@ -294,13 +294,13 @@ tailwind.config.js
 ## 14. Definition of Done (per page/feature)
 
 A page/feature is complete only when it:
-1. Matches the black/red/yellow industrial brand direction, not a generic template look.
+1. Matches the cream/red/yellow industrial brand direction, not a generic template look.
 2. Is fully responsive (tested at 375px, 768px, 1024px, 1440px).
 3. Has working Lenis smooth scroll + at least one intentional GSAP scroll/parallax moment (where appropriate — not forced on every page).
 4. Has correct SEO meta (title, description, OG, canonical, schema where applicable).
 5. Loads with no console errors, no layout shift, images lazy-loaded and optimized.
 6. If content-bearing, is editable through the admin CMS (no hardcoded copy that should be dynamic).
-7. Passes basic accessibility checks (color contrast against black background, alt text, keyboard-navigable nav/dropdown).
+7. Passes basic accessibility checks (color contrast against cream background, alt text, keyboard-navigable nav/dropdown).
 
 ---
 

@@ -34,7 +34,7 @@ class ArticleController extends Controller
         $categories = ArticleCategory::withCount(['articles' => fn($q) => $q->where('status', 'published')])->get();
 
         return view('articles.index', compact('articles', 'categories'), [
-            'seoTitle' => 'Artikel & Insight Logistik — Tips Pengiriman, Regulasi, Studi Kasus',
+            'seoTitle' => 'Artikel & Insight Logistik — Tips Pengiriman & Regulasi',
             'seoDescription' => 'Insight logistik industri: biaya trucking Sumatera-Jawa, regulasi ODOL, manajemen gudang.',
             'canonical' => route('articles.index'),
             'searchQuery' => $request->query('q'),

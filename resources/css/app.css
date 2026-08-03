@@ -4,18 +4,18 @@
 @source "../../app/**/*.php";
 
 @theme {
-  --color-bm-black: #0B0B0C;
-  --color-bm-black-soft: #17181A;
-  --color-bm-black-light: #242529;
+  --color-bm-cream: #F5F0E8;
+  --color-bm-cream-soft: #FAF7F2;
+  --color-bm-cream-light: #FFFDF9;
   --color-bm-red: #D62828;
   --color-bm-red-dark: #A31E1E;
   --color-bm-red-bright: #E53E3E;
   --color-bm-yellow: #F4C430;
   --color-bm-yellow-dark: #C79A1E;
-  --color-bm-white: #F7F7F5;
+  --color-bm-dark: #1C1917;
   --color-bm-gray: #6B6E73;
-  --color-bm-gray-light: #A0A3A8;
-  --color-bm-gray-mid: #35373B;
+  --color-bm-gray-light: #8A8D93;
+  --color-bm-gray-mid: #A0A3A8;
   --font-display: "Oswald", "Archivo Black", sans-serif;
   --font-body: "Public Sans", "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -38,7 +38,7 @@
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-  body { background: #0B0B0C; color: #F7F7F5; overflow-x: hidden; font-family: var(--font-body); }
+  body { background: #F5F0E8; color: #1C1917; overflow-x: hidden; font-family: var(--font-body); }
   h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.95; }
   ::selection { background: #D62828; color: white; }
 }
@@ -46,15 +46,15 @@
 /* Industrial utilities - pure CSS to avoid @apply scanning issues */
 .hazard-stripe {
   height: 8px; width: 100%;
-  background: repeating-linear-gradient(-45deg, #F4C430 0, #F4C430 12px, #0B0B0C 12px, #0B0B0C 24px);
+  background: var(--color-bm-gray-mid);
 }
 .hazard-stripe-sm {
   height: 6px; width: 100%;
-  background: repeating-linear-gradient(-45deg, #F4C430 0, #F4C430 8px, #0B0B0C 8px, #0B0B0C 16px);
+  background: var(--color-bm-gray-mid);
 }
 .hazard-stripe-red {
   height: 8px; width: 100%;
-  background: repeating-linear-gradient(-45deg, #D62828 0, #D62828 12px, #0B0B0C 12px, #0B0B0C 24px);
+  background: var(--color-bm-gray-mid);
 }
 .clip-diagonal { clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%); }
 .clip-diagonal-left { clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px); }

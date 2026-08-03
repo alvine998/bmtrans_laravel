@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="bg-bm-white text-bm-black">
+<section class="bg-bm-cream text-bm-dark">
   <div class="hazard-stripe"></div>
   <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
     <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12">
@@ -12,12 +12,12 @@
         </div>
         <div class="mt-8 flex gap-3">
           <a href="{{ route('contact') }}" class="bg-bm-red text-white px-6 py-3 font-display font-bold uppercase text-[13px]">Minta Penawaran →</a>
-          <a href="{{ route('layanan.index') }}" class="border border-bm-black/15 px-6 py-3 font-display uppercase text-[13px]">Kembali ke layanan</a>
+          <a href="{{ route('layanan.index') }}" class="border border-bm-dark/15 px-6 py-3 font-display uppercase text-[13px]">Kembali ke layanan</a>
         </div>
       </div>
       <div class="space-y-6">
         @if($service->features)
-          <div class="bg-bm-black text-white p-6 border border-white/5">
+          <div class="bg-bm-dark text-bm-cream p-6 border border-bm-dark/5">
             <div class="label-industrial">Proses & Armada</div>
             <ul class="mt-4 space-y-2 font-mono text-[13px]">
               @foreach((array)$service->features as $f)
@@ -27,7 +27,7 @@
           </div>
         @endif
         @if($otherServices->count())
-          <div class="border border-bm-black/10 p-6">
+          <div class="border border-bm-dark/10 p-6">
             <div class="font-mono text-[11px] uppercase">Layanan lain</div>
             <div class="mt-3 space-y-2">
               @foreach($otherServices as $os)

@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
-<section class="bg-bm-black pt-12 pb-16">
+<section class="bg-bm-cream pt-12 pb-16">
   <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
     <div class="label-industrial">Layanan</div>
     <h1 class="mt-3 font-display font-black text-[48px] sm:text-[72px] leading-[0.85] uppercase">Solusi logistik<br><span class="text-bm-yellow">lengkap.</span></h1>
-    <p class="mt-6 max-w-[52ch] text-[16px] text-bm-white/70">Kami melayani pengiriman darat, laut, dan udara. Satu atap, satu standar mutu.</p>
+    <p class="mt-6 max-w-[52ch] text-[16px] text-bm-dark/70">Kami melayani pengiriman darat, laut, dan udara. Satu atap, satu standar mutu.</p>
     <div class="mt-12 grid md:grid-cols-3 gap-6">
       @foreach($services as $s)
-        <a href="{{ route('layanan.show',$s->slug) }}" class="group bg-bm-black-soft border border-white/10 p-8 hover:border-bm-yellow/40">
+        <a href="{{ route('layanan.show',$s->slug) }}" class="group bg-bm-cream-soft border border-bm-dark/10 p-8 hover:border-bm-yellow/40">
           <div class="font-mono text-[11px] text-bm-yellow">{{ $s->slug }}</div>
           <h2 class="mt-3 font-display font-black text-[28px] uppercase">{{ $s->title }}</h2>
           <p class="mt-2 text-[14px] text-bm-gray-light">{{ $s->excerpt }}</p>
-          <div class="mt-6 inline-flex items-center gap-2 border border-white/15 px-4 py-2 font-display uppercase text-[12px] group-hover:bg-bm-yellow group-hover:text-bm-black group-hover:border-bm-yellow">Detail →</div>
+          <div class="mt-6 inline-flex items-center gap-2 border border-bm-dark/15 px-4 py-2 font-display uppercase text-[12px] group-hover:bg-bm-yellow group-hover:text-bm-dark group-hover:border-bm-yellow">Detail →</div>
         </a>
       @endforeach
     </div>

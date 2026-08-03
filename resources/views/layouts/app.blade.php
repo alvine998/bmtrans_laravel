@@ -10,7 +10,7 @@
   <meta name="description" content="{{ $seoDescription ?? $metaDescription ?? 'PT Berkah Makmur Transport — Logistic Express terpercaya untuk pengiriman darat, laut, dan pergudangan di seluruh Indonesia.' }}">
   <link rel="canonical" href="{{ $canonical ?? url()->current() }}">
   <meta name="robots" content="{{ $robots ?? 'index, follow' }}">
-  <meta name="theme-color" content="#0B0B0C">
+  <meta name="theme-color" content="#F5F0E8">
 
   {{-- OG --}}
   <meta property="og:type" content="{{ $ogType ?? 'website' }}">
@@ -31,7 +31,7 @@
   {{-- JSON-LD --}}
   @stack('schema')
 </head>
-<body class="bg-bm-black text-bm-white antialiased selection:bg-bm-red selection:text-white overflow-x-hidden">
+<body class="bg-bm-cream text-bm-dark antialiased selection:bg-bm-red selection:text-white overflow-x-hidden">
 
   {{-- Top hazard stripe --}}
   <div class="hazard-stripe sticky top-0 z-[100]"></div>

@@ -15,8 +15,8 @@ class ContactController extends Controller
     {
         $page = Page::where('slug', 'kontak')->first();
         return view('contact.index', compact('page'), [
-            'seoTitle' => $page?->seo_title ?? 'Hubungi Kami — Cabang Palembang, Jakarta, Surabaya',
-            'seoDescription' => 'Hubungi dispatch 24/7 untuk penawaran cepat. Kantor pusat Palembang, cabang Jakarta & Surabaya.',
+            'seoTitle' => $page?->seo_title ?? 'Hubungi Kami — Kantor Jakarta & Cabang Surabaya',
+            'seoDescription' => 'Hubungi dispatch 24/7 untuk penawaran cepat. Kantor pusat Jakarta, cabang Surabaya.',
             'canonical' => route('contact'),
         ]);
     }

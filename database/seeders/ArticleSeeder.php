@@ -14,7 +14,6 @@ class ArticleSeeder extends Seeder
         $catId = fn (string $slug) => ArticleCategory::where('slug', $slug)->value('id');
         $log = $catId('logistik');
         $armada = $catId('armada');
-        $studi = $catId('studi-kasus');
         $author = Admin::value('id');
 
         $articles = [
@@ -24,9 +23,7 @@ class ArticleSeeder extends Seeder
             ['title' => 'Mengenal Sistem GPS Tracking pada Armada Trucking', 'category_id' => $armada, 'excerpt' => 'Bagaimana teknologi GPS membantu memantau pengiriman secara real-time.', 'body' => '<p>Seluruh armada kami dilengkapi GPS tracking yang memungkinkan klien memantau posisi kendaraan secara real-time melalui dashboard. Teknologi ini juga membantu tim operasional mengoptimalkan rute dan merespons kendala di jalan lebih cepat.</p>'],
             ['title' => 'Perawatan Berkala Armada: Kunci Ketepatan Waktu Pengiriman', 'category_id' => $armada, 'excerpt' => 'Jadwal maintenance rutin yang kami terapkan untuk menjaga performa 127 unit armada.', 'body' => '<p>Setiap unit armada menjalani pemeriksaan berkala meliputi rem, ban, mesin, dan sistem kelistrikan. Perawatan preventif ini mengurangi risiko mogok di jalan yang dapat mengganggu jadwal pengiriman klien.</p>'],
             ['title' => 'Jenis-Jenis Truk dan Kegunaannya dalam Logistik', 'category_id' => $armada, 'excerpt' => 'Dari pickup hingga tronton wingbox, kenali fungsi masing-masing jenis armada.', 'body' => '<p>Pemilihan jenis truk yang tepat sangat menentukan efisiensi pengiriman. Pickup cocok untuk muatan ringan dalam kota, sementara tronton dan trailer digunakan untuk muatan besar antar provinsi.</p><p>Colt Diesel Double menjadi pilihan populer untuk rute menengah karena keseimbangan kapasitas dan biaya operasional.</p>'],
-            ['title' => 'Studi Kasus: Distribusi FMCG Palembang-Surabaya dalam 36 Jam', 'category_id' => $studi, 'excerpt' => 'Bagaimana kami memangkas waktu tempuh distribusi ritel lintas pulau.', 'body' => '<p>Klien FMCG kami sebelumnya mengalami keterlambatan distribusi hingga 3 hari untuk rute Palembang-Surabaya. Dengan optimasi rute dan armada wingbox, waktu tempuh berhasil dipangkas menjadi rata-rata 36 jam.</p><p>Kunci keberhasilan: perencanaan rute berbasis data historis dan koordinasi jadwal penyeberangan.</p>'],
-            ['title' => 'Studi Kasus: Penanganan Muatan Alat Berat ke Lampung', 'category_id' => $studi, 'excerpt' => 'Proses pengiriman alat berat industri yang membutuhkan penanganan khusus.', 'body' => '<p>Pengiriman alat berat memerlukan trailer lowbed dan izin khusus dari Dinas Perhubungan. Tim kami menangani seluruh proses mulai dari survei rute, pengurusan izin, hingga pengawalan selama perjalanan.</p>'],
-            ['title' => 'Studi Kasus: Efisiensi Gudang dengan Sistem Cross-Dock', 'category_id' => $studi, 'excerpt' => 'Implementasi cross-dock di gudang Palembang untuk mempercepat distribusi last-mile.', 'body' => '<p>Sistem cross-dock memungkinkan barang langsung didistribusikan tanpa penyimpanan lama di gudang. Implementasi ini di fasilitas Palembang seluas 5.000m² berhasil menekan waktu tunggu distribusi last-mile hingga 40%.</p>'],
+
         ];
 
         foreach ($articles as $i => $a) {

@@ -15,7 +15,7 @@ class AboutController extends Controller
 
         return view('about.index', compact('page', 'team'), [
             'seoTitle' => $page?->seo_title ?? 'Tentang Kami — Legalitas, Armada, Visi Misi',
-            'seoDescription' => $page?->seo_description ?? 'PT Berkah Makmur Transport berdiri 2010, armada 120+ unit, gudang 5000m2, legalitas lengkap.',
+            'seoDescription' => $page?->seo_description ?? 'PT Berkah Makmur Transport berdiri 2017, armada 120+ unit, gudang 5000m2, legalitas lengkap.',
             'canonical' => route('about'),
         ]);
     }

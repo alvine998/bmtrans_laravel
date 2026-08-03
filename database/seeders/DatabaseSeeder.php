@@ -40,11 +40,11 @@ class DatabaseSeeder extends Seeder
             'contact.phone' => '+62 711-123-456',
             'contact.whatsapp' => '6281271234567',
             'contact.email' => 'info@berkahmakmurtransport.co.id',
-            'contact.address' => 'Jl. Lintas Timur KM 12, Alang-Alang Lebar, Palembang 30151',
+            'contact.address' => 'Jl. Raya Jakarta Timur No. 88, Cakung, Jakarta 13910',
             'social.instagram' => '',
             'social.tiktok' => '',
-            'seo.home_title' => 'PT Berkah Makmur Transport — Logistic Express Sumatera Jawa | Armada 24/7',
-            'seo.home_description' => 'Spesialis trucking, sea freight & pergudangan sejak 2010. 120+ armada GPS real-time, asuransi all-risk. Penawaran 2 jam.',
+            'seo.home_title' => 'PT Berkah Makmur Transport — Logistic Express Indonesia | Armada 24/7',
+            'seo.home_description' => 'Spesialis trucking, sea freight & pengiriman udara sejak 2017. 120+ armada GPS real-time, asuransi all-risk. Penawaran 2 jam.',
             'stats.total_shipments' => '12.847',
             'site.name' => 'PT Berkah Makmur Transport',
         ];
@@ -55,13 +55,13 @@ class DatabaseSeeder extends Seeder
         // Categories
         $catLog = ArticleCategory::firstOrCreate(['slug' => 'logistik'], ['name' => 'Logistik', 'description' => 'Tips & regulasi logistik']);
         ArticleCategory::firstOrCreate(['slug' => 'armada'], ['name' => 'Armada']);
-        ArticleCategory::firstOrCreate(['slug' => 'studi-kasus'], ['name' => 'Studi Kasus']);
+
 
         // Services (DB driven, nav dynamic)
         Service::firstOrCreate(['slug' => 'pengiriman-darat'], [
             'title' => 'Pengiriman Darat',
             'excerpt' => 'Jalur Sumatera–Jawa–Bali, truk CDD s/d trailer 40ft, manajemen ODOL, GPS live.',
-            'body' => '<p><strong>Trucking Sumatera—Jawa—Bali</strong> dengan 127 unit aktif. CDD bak, Fuso wingbox, tronton, trailer lowbed. Semua driver tetap, bukan harian lepas. SOP muat: cek surat, foto 4 sisi, segel, baru jalan.</p><p>Coverage: Palembang—Lampung—Jakarta—Bandung—Semarang—Surabaya—Bali. Transit time rata-rata Palembang–Surabaya 36–40 jam (tergantung antrian penyeberangan).</p>',
+            'body' => '<p><strong>Trucking Sumatera—Jawa—Bali</strong> dengan 127 unit aktif. CDD bak, Fuso wingbox, tronton, trailer lowbed. Semua driver tetap, bukan harian lepas. SOP muat: cek surat, foto 4 sisi, segel, baru jalan.</p><p>Coverage: Jakarta—Bandung—Semarang—Surabaya—Bali—Lampung—Medan. Transit time rata-rata Jakarta–Surabaya 2–3 hari (tergantung antrian penyeberangan).</p>',
             'features' => ['Armada GPS real-time', 'Asuransi all-risk', 'SOP foto 4 sisi + video segel', 'Driver tetap bersertifikat', 'Laporan POD digital'],
             'order' => 1,
             'is_active' => true,
@@ -88,7 +88,7 @@ class DatabaseSeeder extends Seeder
 
         // Pages - hero wording now split into editable keys
         $berandaSections = [
-            'hero_kicker' => 'Sejak 2010 — Palembang • Jakarta • Surabaya',
+            'hero_kicker' => 'Sejak 2017 — Jakarta • Bandung • Surabaya',
             'hero_title_1' => 'Logistik',
             'hero_title_2' => 'tidak boleh',
             'hero_title_3' => 'bermain-',
@@ -136,7 +136,7 @@ class DatabaseSeeder extends Seeder
             'hero_kicker' => 'Tentang Kami',
             'hero_title_1' => 'Bukan sekadar',
             'hero_title_2' => 'angkut-angkut.',
-            'intro_1' => 'PT Berkah Makmur Transport berdiri 2010 di Palembang. Awalnya hanya 3 truk CDD untuk angkutan pupuk, kini mencakup jalur darat Sumatera–Jawa–Bali, sea freight LCL via Tanjung Priok–Panjang–Belawan, dan gudang 5.000m².',
+            'intro_1' => 'PT Berkah Makmur Transport berdiri 2017 di Jakarta. Awalnya hanya 3 truk CDD untuk angkutan distribusi, kini mencakup jalur darat Sumatera–Jawa–Bali, sea freight LCL via Tanjung Priok, dan pengiriman udara ke seluruh Indonesia.',
             'intro_2' => 'Kami menolak overloading di atas toleransi, menolak jalan tikus tanpa izin, menolak bongkar tanpa dokumentasi. Mahal sedikit di depan, tapi murah di klaim belakang.',
             'visi' => 'Menjadi logistik industri paling dapat diandalkan di koridor barat Indonesia.',
             'misi' => 'Disiplin SOP, transparan tracking, driver sejahtera, kargo selamat.',
@@ -152,7 +152,7 @@ class DatabaseSeeder extends Seeder
         $tentang = Page::firstOrCreate(['slug' => 'tentang-kami'], [
             'title' => 'Tentang Kami',
             'seo_title' => 'Tentang Kami — Legalitas, Armada, Visi Misi',
-            'seo_description' => 'PT Berkah Makmur Transport berdiri 2010, armada 120+ unit, gudang 5000m2, legalitas lengkap.',
+            'seo_description' => 'PT Berkah Makmur Transport berdiri 2017, armada 120+ unit, gudang 5000m2, legalitas lengkap.',
             'sections' => $tentangSections,
         ]);
         if (empty($tentang->sections) || ! isset($tentang->sections['hero_title_1'])) {
@@ -174,6 +174,26 @@ class DatabaseSeeder extends Seeder
             $kontak->update(['sections' => $kontakSections]);
         } else {
             $kontak->update(['sections' => array_merge($kontakSections, $kontak->sections)]);
+        }
+
+        // Testimonials
+        $testimonials = [
+            ['name' => 'Ahmad Rizky', 'company' => 'PT Sumber Makmur Abadi', 'quote' => 'Sudah 3 tahun pakai BM Trans untuk distribusi. On-time, driver disiplin, komunikasi lancar.', 'rating' => 5, 'order' => 1],
+            ['name' => 'Budi Santoso', 'company' => 'CV Logistik Baja', 'quote' => 'Muatan butuh handling khusus. BM Trans handlingnya rapi dan profesional.', 'rating' => 5, 'order' => 2],
+            ['name' => 'Dewi Lestari', 'company' => 'PT Indah Jaya Logistik', 'quote' => 'Pengiriman Surabaya–Jakarta selalu sampai tepat waktu. Tracking real-time sangat membantu.', 'rating' => 5, 'order' => 3],
+            ['name' => 'Hendra Wijaya', 'company' => 'PT Multi Makmur Sejahtera', 'quote' => 'Armada lengkap, harga transparan. Koordinasi dengan tim operasional sangat mudah.', 'rating' => 5, 'order' => 4],
+            ['name' => 'Rina Marlina', 'company' => 'PT Nusantara Freight', 'quote' => 'Distribusi FMCG kami lancar sejak pakai BM Trans. Lead time konsisten untuk semua rute.', 'rating' => 4, 'order' => 5],
+            ['name' => 'Deni Kurniawan', 'company' => 'CV Sukses Mandiri', 'quote' => 'Pengiriman alat berat dengan trailer lowbed ditangani dari awal sampai akhir. Profesional.', 'rating' => 5, 'order' => 6],
+            ['name' => 'Sari Permata', 'company' => 'PT Citra Logistics', 'quote' => 'SOP foto 4 sisi + video segel bikin kami tenang. Tidak ada klaim lagi soal kehilangan.', 'rating' => 5, 'order' => 7],
+            ['name' => 'Andi Pratama', 'company' => 'PT Bangun Persada', 'quote' => 'Harga negotiable dan responsif. Kalau ada kendala di lapangan, langsung dikomunikasikan.', 'rating' => 4, 'order' => 8],
+            ['name' => 'Maya Sari', 'company' => 'PT Delta Perkasa', 'quote' => 'Pengiriman ke Kalimantan dan Sulawesi juga ditangani. Jangkauan luas, armada siap.', 'rating' => 5, 'order' => 9],
+            ['name' => 'Fajar Nugroho', 'company' => 'CV Abadi Jaya', 'quote' => 'Partner logistik terbaik untuk UMKM. Fleksibel, pahami kebutuhan bisnis kecil.', 'rating' => 5, 'order' => 10],
+        ];
+        foreach ($testimonials as $t) {
+            \App\Models\Testimonial::firstOrCreate(
+                ['name' => $t['name']],
+                array_merge($t, ['is_active' => true])
+            );
         }
 
         $this->call(ArticleSeeder::class);

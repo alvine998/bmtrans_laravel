@@ -28,7 +28,7 @@ class HomeController extends Controller
         $seoTitle = $page?->seo_title
             ?? SiteSetting::getValue('seo.home_title', 'PT Berkah Makmur Transport — Logistic Express Sumatera Jawa | Armada 24/7');
         $seoDescription = $page?->seo_description
-            ?? SiteSetting::getValue('seo.home_description', 'Jasa logistik dan transportasi Indonesia sejak 2010. Armada lengkap, GPS real-time, asuransi penuh. Hubungi untuk penawaran terbaik.');
+            ?? SiteSetting::getValue('seo.home_description', 'Jasa logistik dan transportasi Indonesia sejak 2017. Armada lengkap, GPS real-time, asuransi penuh. Hubungi untuk penawaran terbaik.');
 
         return view('home.index', compact('services', 'armadas', 'testimonials', 'articles', 'gallery', 'page', 'partners'), [
             'seoTitle' => $seoTitle,
