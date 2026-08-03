@@ -102,7 +102,7 @@
         <div class="mt-4 flex gap-2 font-mono text-[10px]">
           <span class="px-2 py-1 bg-bm-yellow/10 text-bm-yellow border border-bm-yellow/20">DARAT</span>
           <span class="px-2 py-1 bg-white/5">LAUT</span>
-          <span class="px-2 py-1 bg-white/5">GUDANG</span>
+          <span class="px-2 py-1 bg-white/5">UDARA</span>
         </div>
       </div>
     </div>

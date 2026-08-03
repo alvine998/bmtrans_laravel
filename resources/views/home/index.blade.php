@@ -411,7 +411,7 @@ document.querySelectorAll('.faq-toggle').forEach(btn => {
   'name' => 'PT Berkah Makmur Transport',
   'url' => request()->root(),
   'logo' => asset('images/logo.png'),
-  'description' => 'Jasa logistik dan transportasi Indonesia — pengiriman darat, laut, dan pergudangan.',
+  'description' => 'Jasa logistik dan transportasi Indonesia — pengiriman darat, laut, dan udara.',
   'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Palembang', 'addressCountry' => 'ID']
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>

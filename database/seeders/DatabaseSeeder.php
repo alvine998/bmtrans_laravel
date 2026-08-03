@@ -77,11 +77,11 @@ class DatabaseSeeder extends Seeder
             'is_active' => true,
         ]);
 
-        Service::firstOrCreate(['slug' => 'pergudangan-distribusi'], [
-            'title' => 'Pergudangan & Distribusi',
-            'excerpt' => 'Gudang 5.000m² Palembang, WMS sederhana, cross-dock, last-mile Sumatera.',
-            'body' => '<p>Gudang di Palembang 5.000m², tinggi 12m, kapasitas 4.500 pallet. Tersedia WMS sederhana, forklift 5 ton, dan distribusi last-mile dengan armada sendiri.</p>',
-            'features' => ['5.000m² coverage', 'WMS & stok opname mingguan', 'Cross-dock', 'Last-mile Sumatera'],
+        Service::firstOrCreate(['slug' => 'pengiriman-udara'], [
+            'title' => 'Pengiriman Udara',
+            'excerpt' => 'Kargo udara door-to-door, customs handling, real-time tracking untuk pengiriman cepat & urgent.',
+            'body' => '<p>Layanan pengiriman udara untuk kargo ringan hingga berat, mencakup door-to-door pickup & delivery, penanganan customs & dokumentasi (AWB, PEB/PIB), serta real-time tracking. Cocok untuk pengiriman urgent, spare parts, elektronik, dan barang bernilai tinggi dengan lead time 1-3 hari.</p>',
+            'features' => ['Door-to-door pickup & delivery', 'Customs handling (AWB/PEB/PIB)', 'Real-time tracking', 'Express 1-3 hari'],
             'order' => 3,
             'is_active' => true,
         ]);

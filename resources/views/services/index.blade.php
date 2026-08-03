@@ -4,7 +4,7 @@
   <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
     <div class="label-industrial">Layanan</div>
     <h1 class="mt-3 font-display font-black text-[48px] sm:text-[72px] leading-[0.85] uppercase">Solusi logistik<br><span class="text-bm-yellow">lengkap.</span></h1>
-    <p class="mt-6 max-w-[52ch] text-[16px] text-bm-white/70">Kami melayani pengiriman darat, laut, dan pergudangan. Satu atap, satu standar mutu.</p>
+    <p class="mt-6 max-w-[52ch] text-[16px] text-bm-white/70">Kami melayani pengiriman darat, laut, dan udara. Satu atap, satu standar mutu.</p>
     <div class="mt-12 grid md:grid-cols-3 gap-6">
       @foreach($services as $s)
         <a href="{{ route('layanan.show',$s->slug) }}" class="group bg-bm-black-soft border border-white/10 p-8 hover:border-bm-yellow/40">

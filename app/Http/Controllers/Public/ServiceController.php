@@ -13,8 +13,8 @@ class ServiceController extends Controller
     {
         $services = Service::active()->ordered()->get();
         return view('services.index', compact('services'), [
-            'seoTitle' => 'Layanan Logistik | Trucking, Sea Freight, Pergudangan',
-            'seoDescription' => 'Layanan lengkap: pengiriman darat Sumatera-Jawa-Bali, sea freight, dan pergudangan distribusi.',
+            'seoTitle' => 'Layanan Logistik | Trucking, Sea Freight, Air Freight',
+            'seoDescription' => 'Layanan lengkap: pengiriman darat Sumatera-Jawa-Bali, sea freight, dan udara.',
             'canonical' => route('layanan.index'),
         ]);
     }

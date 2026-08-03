@@ -146,8 +146,8 @@ Guidelines:
 Suggested default services (agent should confirm with client but implement structure to support any 3 via DB, not hardcoded):
 
 1. **Pengiriman Darat (Trucking / Land Freight)** — `layanan.darat`
-2. **Pengiriman Laut & Kargo (Sea Freight / Cargo)** — `layanan.laut`
-3. **Logistik Gudang & Distribusi (Warehousing & Distribution)** — `layanan.gudang`
+2. **Pengiriman Laut (Sea Freight)** — `layanan.laut`
+3. **Pengiriman Udara (Air Freight)** — `layanan.udara`
 
 Each service page: hero banner, description (rich text from CMS), coverage area, fleet/equipment used, process steps (icons), related articles, CTA to contact.
 
