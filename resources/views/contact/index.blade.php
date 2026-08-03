@@ -20,6 +20,10 @@
             <div class="border border-bm-dark/10 p-4"><div class="font-mono text-[10px] uppercase">Jakarta</div><div class="font-display text-[14px] uppercase mt-1">Cakung, Jaktim — Transit hub</div></div>
             <div class="border border-bm-dark/10 p-4"><div class="font-mono text-[10px] uppercase">Surabaya</div><div class="font-display text-[14px] uppercase mt-1">Margomulyo — Gudang 2.000m²</div></div>
           </div>
+          <div class="border border-bm-red/30 bg-bm-yellow/20 p-5">
+            <div class="font-mono text-[11px] uppercase font-bold text-bm-red">Termin Pembayaran</div>
+            <div class="mt-1 font-display text-[16px] uppercase leading-tight">Maksimal {{ \App\Models\SiteSetting::getValue('payment.term', '14 hari') }}</div>
+          </div>
         </div>
       </div>
 

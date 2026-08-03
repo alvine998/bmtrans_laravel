@@ -41,6 +41,7 @@ class DatabaseSeeder extends Seeder
             'contact.whatsapp' => '6281271234567',
             'contact.email' => 'info@berkahmakmurtransport.co.id',
             'contact.address' => 'Jl. Raya Jakarta Timur No. 88, Cakung, Jakarta 13910',
+            'payment.term' => '14 hari',
             'social.instagram' => '',
             'social.tiktok' => '',
             'seo.home_title' => 'PT Berkah Makmur Transport — Logistic Express Indonesia | Armada 24/7',

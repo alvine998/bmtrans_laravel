@@ -342,7 +342,7 @@
         ],
         'Tarif & Pembayaran' => [
           'Bagaimana perhitungan tarif?' => 'Tarif dihitung berdasarkan berat atau volume (diambil yang lebih besar). Untuk barang ringan namun besar, volume dikonversi ke berat ekuivalen.',
-          'Metode pembayaran apa yang didukung?' => 'Transfer bank (BCA, Mandiri, BRI) tersedia. Untuk korporat dapat dilakukan termin 30 hari dengan perjanjian.',
+          'Metode pembayaran apa yang didukung?' => 'Transfer bank (BCA, Mandiri, BRI) tersedia. Untuk korporat dapat dilakukan termin maksimal ' . \App\Models\SiteSetting::getValue('payment.term', '14 hari') . ' dengan perjanjian.',
         ],
         'Pickup & Pengantaran' => [
           'Apakah ada jasa pickup di lokasi?' => 'Ya, kami menjemput barang ke lokasi Anda. Biaya pickup menyesuaikan jarak dari pool terdekat.',
