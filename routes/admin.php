@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ContactMessageController as AdminMessageControlle
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Admin\PartnerController as AdminPartnerController;
+use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialController;
 use App\Http\Controllers\Admin\PageController as AdminPageController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\SiteSettingController as AdminSettingController;
@@ -52,7 +53,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::middleware(['admin.role:super_admin'])->group(function () {
             Route::resource('users', AdminUserController::class)->except(['show'])->parameters(['users' => 'admin']);
-            Route::get('/testimonials', fn() => view('admin.placeholder', ['title' => 'Testimoni'] ))->name('testimonials.index');
+            Route::resource('testimonials', AdminTestimonialController::class)->except(['show']);
             Route::get('/team', fn() => view('admin.placeholder', ['title' => 'Tim'] ))->name('team.index');
         });
     });

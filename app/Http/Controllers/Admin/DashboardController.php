@@ -8,6 +8,7 @@ use App\Models\Article;
 use App\Models\ContactMessage;
 use App\Models\GalleryItem;
 use App\Models\Service;
+use App\Models\Testimonial;
 
 class DashboardController extends Controller
 {
@@ -20,6 +21,7 @@ class DashboardController extends Controller
                 'articles' => Article::count(),
                 'published' => Article::where('status', 'published')->count(),
                 'gallery' => GalleryItem::count(),
+                'testimonials' => Testimonial::count(),
                 'messages' => ContactMessage::count(),
                 'unread' => ContactMessage::unread()->count(),
             ],

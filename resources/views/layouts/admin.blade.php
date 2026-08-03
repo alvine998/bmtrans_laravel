@@ -23,6 +23,7 @@
       <a href="{{ route('admin.articles.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-dark/60 hover:text-bm-dark">Artikel</a>
       <a href="{{ route('admin.gallery.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-dark/60 hover:text-bm-dark">Galeri</a>
       <a href="{{ route('admin.partners.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-dark/60 hover:text-bm-dark">Partner & Klien</a>
+      <a href="{{ route('admin.testimonials.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-dark/60 hover:text-bm-dark">Testimoni</a>
       <a href="{{ route('admin.messages.index') }}" class="block px-3 py-2 font-mono text-[12px] uppercase text-bm-dark/60 hover:text-bm-dark">Pesan Masuk</a>
       <div class="h-px bg-bm-dark/5 my-3"></div>
       @if(auth('admin')->user()?->isSuperAdmin())
