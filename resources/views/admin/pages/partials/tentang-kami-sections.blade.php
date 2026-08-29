@@ -25,7 +25,7 @@
   <div class="mt-4 space-y-3">
     <div>
       <label class="font-mono text-[10px] uppercase text-bm-gray-light">{{ $editable['intro_1'] }}</label>
-      <textarea name="sections[intro_1]" rows="3" class="mt-1 w-full bg-bm-cream border border-bm-dark/10 px-3 py-2 text-[13px]">{{ old('sections.intro_1', $s['intro_1'] ?? 'PT Berkah Makmur Transport berdiri 2017 di Palembang. Awalnya hanya 3 truk CDD untuk angkutan pupuk, kini mencakup jalur darat Sumatera–Jawa–Bali, sea freight LCL via Tanjung Priok–Panjang–Belawan, dan gudang 5.000m².') }}</textarea>
+      <textarea name="sections[intro_1]" rows="3" class="mt-1 w-full bg-bm-cream border border-bm-dark/10 px-3 py-2 text-[13px]">{{ old('sections.intro_1', $s['intro_1'] ?? 'PT Berkah Makmur Transport berdiri 2017 di Jakarta. Awalnya hanya 3 truk CDD untuk angkutan pupuk, kini mencakup jalur darat Sumatera–Jawa–Bali, sea freight LCL via Tanjung Priok–Panjang–Belawan, dan gudang 5.000m².') }}</textarea>
     </div>
     <div>
       <label class="font-mono text-[10px] uppercase text-bm-gray-light">{{ $editable['intro_2'] }}</label>

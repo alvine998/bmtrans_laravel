@@ -20,7 +20,7 @@
         <div>
           <div class="inline-flex items-center gap-3 mb-6">
             <span class="w-12 h-px bg-bm-yellow"></span>
-            <span class="label-industrial">{{ $v('hero_kicker','Sejak 2017 — Palembang • Jakarta • Surabaya') }}</span>
+            <span class="label-industrial">{{ $v('hero_kicker','Sejak 2017 — Jakarta') }}</span>
           </div>
 
           <h1 class="font-display font-black text-[42px] sm:text-[60px] lg:text-[84px] leading-[0.85] tracking-[-0.04em] uppercase">
@@ -208,7 +208,7 @@
         <div class="bg-bm-cream-soft border border-bm-dark/5 p-6 flex gap-4">
           <div class="w-12 h-12 bg-bm-cream/10 flex items-center justify-center font-display font-bold text-lg">S</div>
           <div>
-            <div class="font-display font-bold uppercase">PT Sumber Makmur Abadi <span class="font-body normal-case text-bm-gray-light text-[12px]">• Palembang</span></div>
+            <div class="font-display font-bold uppercase">PT Sumber Makmur Abadi <span class="font-body normal-case text-bm-gray-light text-[12px]">• Jakarta</span></div>
             <div class="mt-1 text-[13px] text-bm-dark/80">"Sudah 3 tahun pakai BM Trans untuk distribusi. On-time, driver disiplin, komunikasi lancar."</div>
           </div>
         </div>
@@ -422,7 +422,7 @@ document.querySelectorAll('.faq-toggle').forEach(btn => {
   'url' => request()->root(),
   'logo' => asset('images/logo.png'),
   'description' => 'Jasa logistik dan transportasi Indonesia — pengiriman darat, laut, dan udara.',
-  'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Palembang', 'addressCountry' => 'ID']
+  'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Jakarta', 'addressCountry' => 'ID']
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
 @endpush

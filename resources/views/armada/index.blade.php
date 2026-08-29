@@ -56,7 +56,7 @@
           </div>
 
           <div class="mt-4 bg-bm-cream border border-bm-dark/10 p-3 font-mono text-[10px] text-bm-gray-light">
-            Catatan: Harga exclude tol, parkir, bongkar muat (jika ada). Armada standby Palembang • Jakarta • Surabaya.
+            Catatan: Harga exclude tol, parkir, bongkar muat (jika ada). Armada standby Sumatera - Jawa - Bali.
           </div>
         </div>
       </div>

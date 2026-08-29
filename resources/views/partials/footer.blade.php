@@ -1,7 +1,7 @@
 @php
-  $services = \App\Models\Service::active()->ordered()->take(4)->get();
-  $set = fn($k,$d='') => \App\Models\SiteSetting::getValue($k,$d);
-  $logo = \App\Models\SiteSetting::getValue('branding.logo');
+$services = \App\Models\Service::active()->ordered()->take(4)->get();
+$set = fn($k,$d='') => \App\Models\SiteSetting::getValue($k,$d);
+$logo = \App\Models\SiteSetting::getValue('branding.logo');
 @endphp
 
 <footer class="relative mt-24 bg-bm-dark border-t border-bm-dark text-bm-cream overflow-hidden">
@@ -17,11 +17,11 @@
       <div>
         <div class="flex items-center gap-3">
           @if($logo)
-            <div class="w-12 h-12 bg-bm-cream border border-bm-dark/10 flex items-center justify-center overflow-hidden shrink-0">
-              <img src="{{ asset('storage/'.$logo) }}" alt="Logo Berkah Makmur Transport" class="w-full h-full object-contain">
-            </div>
+          <div class="w-12 h-12 bg-bm-cream border border-bm-dark/10 flex items-center justify-center overflow-hidden shrink-0">
+            <img src="{{ asset('storage/'.$logo) }}" alt="Logo Berkah Makmur Transport" class="w-full h-full object-contain">
+          </div>
           @else
-            <div class="w-12 h-12 bg-bm-red flex items-center justify-center font-display font-black text-xl">BM</div>
+          <div class="w-12 h-12 bg-bm-red flex items-center justify-center font-display font-black text-xl">BM</div>
           @endif
           <div class="leading-[0.9]">
             <div class="text-[20px] uppercase leading-none" style="font-family:'Poppins',sans-serif;font-weight:400">PT Berkah Makmur</div>
@@ -36,27 +36,31 @@
           <span class="px-3 py-1 border border-bm-dark/10 font-mono text-[10px] uppercase tracking-widest">SIUP • TDP • NPWP</span>
         </div>
         @php
-          $ig = $set('social.instagram');
-          $tt = $set('social.tiktok');
+        $ig = $set('social.instagram');
+        $tt = $set('social.tiktok');
         @endphp
         @if($ig || $tt)
-          <div class="mt-5 flex gap-2">
-            @if($ig)
-              <a href="{{ $ig }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 border border-bm-dark/10 hover:border-bm-yellow hover:text-bm-yellow transition-colors font-mono text-[10px] uppercase tracking-widest" aria-label="Instagram">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                Instagram
-              </a>
-            @endif
-            @if($tt)
-              <a href="{{ $tt }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 border border-bm-dark/10 hover:border-bm-yellow hover:text-bm-yellow transition-colors font-mono text-[10px] uppercase tracking-widest" aria-label="TikTok">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.8a6.34 6.34 0 0010.86 4.48V13.3a8.16 8.16 0 005.58 2.18v-3.45a4.85 4.85 0 01-3.55-1.34z"/></svg>
-                TikTok
-              </a>
-            @endif
-          </div>
+        <div class="mt-5 flex gap-2">
+          @if($ig)
+          <a href="{{ $ig }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 border border-bm-dark/10 hover:border-bm-yellow hover:text-bm-yellow transition-colors font-mono text-[10px] uppercase tracking-widest" aria-label="Instagram">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            Instagram
+          </a>
+          @endif
+          @if($tt)
+          <a href="{{ $tt }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-2 border border-bm-dark/10 hover:border-bm-yellow hover:text-bm-yellow transition-colors font-mono text-[10px] uppercase tracking-widest" aria-label="TikTok">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.8a6.34 6.34 0 0010.86 4.48V13.3a8.16 8.16 0 005.58 2.18v-3.45a4.85 4.85 0 01-3.55-1.34z" />
+            </svg>
+            TikTok
+          </a>
+          @endif
+        </div>
         @endif
         <div class="mt-8 font-mono text-[11px] text-bm-gray-light">
-          <div>📍 {{ $set('contact.address', 'Jl. Lintas Timur KM 12, Palembang, Sumsel 30151') }}</div>
+          <div>📍 {{ $set('contact.address', 'Jl. Jelambar Selatan II Gg. 18 Gg. Buntu No.2, RT.3/RW.3, Jelambar Baru, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11460') }}</div>
           <div class="mt-2">© <span id="current-year">{{ date('Y') }}</span> PT Berkah Makmur Transport • All rights reserved</div>
         </div>
       </div>
@@ -66,7 +70,7 @@
         <div class="label-industrial mb-4">Layanan</div>
         <ul class="space-y-2">
           @foreach($services as $s)
-            <li><a href="{{ route('layanan.show', $s->slug) }}" class="text-[14px] text-bm-cream/70 hover:text-bm-yellow hover:pl-1 transition-all">{{ $s->title }}</a></li>
+          <li><a href="{{ route('layanan.show', $s->slug) }}" class="text-[14px] text-bm-cream/70 hover:text-bm-yellow hover:pl-1 transition-all">{{ $s->title }}</a></li>
           @endforeach
           <li><a href="{{ route('armada.index') }}" class="text-[14px] text-bm-cream/70 hover:text-bm-yellow hover:pl-1 transition-all">Armada & Harga</a></li>
           <li class="pt-2"><a href="{{ route('layanan.index') }}" class="font-mono text-[11px] uppercase tracking-widest text-bm-yellow">Index Layanan →</a></li>

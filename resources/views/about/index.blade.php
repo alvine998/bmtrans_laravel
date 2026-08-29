@@ -4,7 +4,7 @@
   $kicker = $s['hero_kicker'] ?? 'Tentang Kami';
   $title1 = $s['hero_title_1'] ?? 'Mitra logistik';
   $title2 = $s['hero_title_2'] ?? 'yang tepat.';
-  $intro1 = $s['intro_1'] ?? 'PT Berkah Makmur Transport berdiri 2017 di Palembang. Berawal dari 3 truk, kini kami melayani pengiriman darat Sumatera–Jawa–Bali, sea freight, dan pergudangan dengan armada yang terus berkembang.';
+  $intro1 = $s['intro_1'] ?? 'PT Berkah Makmur Transport berdiri 2017 di Jakarta. Berawal dari 3 truk, kini kami melayani pengiriman darat Sumatera–Jawa–Bali, sea freight, dan pergudangan dengan armada yang terus berkembang.';
   $intro2 = $s['intro_2'] ?? 'Kami percaya logistik yang baik adalah yang transparan, tepat waktu, dan dapat diandalkan. Tidak ada biaya tersembunyi, tidak ada janji kosong.';
   $visi = $s['visi'] ?? 'Menjadi penyedia jasa logistik paling terpercaya di Indonesia.';
   $misi = $s['misi'] ?? 'Memberikan layanan tepat waktu, transparan, dan profesional untuk setiap pengiriman.';
