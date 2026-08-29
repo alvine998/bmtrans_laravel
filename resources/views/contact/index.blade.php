@@ -14,7 +14,7 @@
           <div class="border border-bm-dark/10 p-5">
             <div class="font-mono text-[11px] uppercase">Kantor Pusat — Palembang</div>
             <div class="mt-1 font-display text-[16px] leading-tight uppercase">Jl. Lintas Timur KM 12, Kec. Alang-Alang Lebar, Palembang 30151</div>
-            <div class="mt-2 font-mono text-[12px]">WA: {{ \App\Models\SiteSetting::getValue('contact.whatsapp','6281234567890') }} • Telp: {{ \App\Models\SiteSetting::getValue('contact.phone') }}</div>
+            <div class="mt-2 font-mono text-[12px]">WA: {{ \App\Models\SiteSetting::getValue('contact.whatsapp','6285220868477') }} • Telp: {{ \App\Models\SiteSetting::getValue('contact.phone') }}</div>
           </div>
           <div class="grid grid-cols-2 gap-3">
             <div class="border border-bm-dark/10 p-4"><div class="font-mono text-[10px] uppercase">Jakarta</div><div class="font-display text-[14px] uppercase mt-1">Cakung, Jaktim — Transit hub</div></div>

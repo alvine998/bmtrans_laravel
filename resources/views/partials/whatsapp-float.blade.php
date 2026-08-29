@@ -1,5 +1,5 @@
 @php
-  $waNumber = \App\Models\SiteSetting::getValue('contact.whatsapp', '6281234567890');
+  $waNumber = \App\Models\SiteSetting::getValue('contact.whatsapp', '6285220868477');
   $cleanNumber = preg_replace('/[^0-9]/', '', $waNumber);
   $msg = rawurlencode('Halo BMTrans, saya mau tanya penawaran pengiriman. Bisa dibantu?');
   $waLink = "https://wa.me/{$cleanNumber}?text={$msg}";

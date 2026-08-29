@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(php artisan tinker --execute=\"echo \\App\\Models\\SiteSetting::getValue('contact.whatsapp', '(unset)');\")",
+      "Shell(php artisan tinker --execute=\"\\App\\Models\\SiteSetting::setValue('contact.whatsapp', '6285220868477'); echo \\App\\Models\\SiteSetting::getValue('contact.whatsapp');\")",
+      "Shell(php artisan cache:clear)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

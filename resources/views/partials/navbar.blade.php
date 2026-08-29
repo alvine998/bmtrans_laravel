@@ -1,7 +1,7 @@
 @php
   $settings = [
     'phone' => \App\Models\SiteSetting::getValue('contact.phone', '+62 812-3456-7890'),
-    'wa' => \App\Models\SiteSetting::getValue('contact.whatsapp', '6281234567890'),
+    'wa' => \App\Models\SiteSetting::getValue('contact.whatsapp', '6285220868477'),
     'email' => \App\Models\SiteSetting::getValue('contact.email', 'info@berkahmakmurtransport.co.id'),
   ];
   $logo = \App\Models\SiteSetting::getValue('branding.logo');
@@ -40,9 +40,9 @@
         @endif
         <div class="leading-[0.9]">
           <div class="flex items-center gap-2">
-            <span class="text-[18px] sm:text-[20px] uppercase tracking-tight" style="font-family:'Poppins',sans-serif;font-weight:600">PT Berkah Makmur</span>
+            <span class="text-[18px] sm:text-[20px] uppercase tracking-tight" style="font-family:'Poppins',sans-serif;font-weight:600">PT Berkah Makmur Transport</span>
           </div>
-          <div class="mt-1 font-mono text-[9px] uppercase tracking-[0.25em] text-bm-yellow">Transport • EST 2017</div>
+          <div class="mt-1 font-mono text-[9px] uppercase tracking-[0.25em] text-bm-yellow">EST 2017</div>
         </div>
       </a>
 

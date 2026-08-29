@@ -35,7 +35,7 @@
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="https://wa.me/{{ \App\Models\SiteSetting::getValue('contact.whatsapp','6281234567890') }}" target="_blank" class="bg-bm-red text-white px-6 py-3.5 font-display font-bold uppercase text-[13px] tracking-wide hover:bg-bm-red-dark clip-notch inline-flex items-center gap-3">
+            <a href="https://wa.me/{{ \App\Models\SiteSetting::getValue('contact.whatsapp','6285220868477') }}" target="_blank" class="bg-bm-red text-white px-6 py-3.5 font-display font-bold uppercase text-[13px] tracking-wide hover:bg-bm-red-dark clip-notch inline-flex items-center gap-3">
               Mulai Kirim (WhatsApp) <span>→</span>
             </a>
             <a href="#armada" class="border border-bm-dark/20 px-6 py-3.5 font-display font-bold uppercase text-[13px] hover:bg-bm-dark hover:text-bm-cream inline-flex items-center gap-2">{{ $v('hero_cta_secondary','Lihat Armada') }}</a>
@@ -68,7 +68,7 @@
             </div>
             <div class="mt-6 flex items-center gap-3 bg-bm-cream p-3 border border-bm-dark/5">
               <span class="w-2 h-2 bg-bm-yellow rounded-full animate-pulse"></span>
-              <span class="font-mono text-[11px] text-bm-gray-light">Operasional 24/7 — Dispatch pusat Palembang</span>
+              <span class="font-mono text-[11px] text-bm-gray-light">Operasional 24/7 — Dispatch pusat Jakarta</span>
             </div>
           </div>
         </div>
@@ -79,15 +79,15 @@
   {{-- Ticker --}}
   <div class="border-y border-bm-dark/5 bg-bm-cream-light overflow-hidden">
     <div class="flex animate-marquee whitespace-nowrap py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-bm-gray-light">
-      <span class="mx-6">● TRUCKING SUMATERA—JAWA—BALI ● SEA FREIGHT MERAK—BAKAUHENI ● WAREHOUSING 5.000M² PALEMBANG ● GPS REAL-TIME ● ASURANSI ALL-RISK ● DISPATCH 24/7</span>
-      <span class="mx-6">● TRUCKING SUMATERA—JAWA—BALI ● SEA FREIGHT MERAK—BAKAUHENI ● WAREHOUSING 5.000M² PALEMBANG ● GPS REAL-TIME ● ASURANSI ALL-RISK ● DISPATCH 24/7</span>
+      <span class="mx-6">● TRUCKING SUMATERA—JAWA—BALI ● SEA FREIGHT MERAK—BAKAUHENI ● GPS REAL-TIME ● ASURANSI ALL-RISK ● DISPATCH 24/7</span>
+      <span class="mx-6">● TRUCKING SUMATERA—JAWA—BALI ● SEA FREIGHT MERAK—BAKAUHENI ● GPS REAL-TIME ● ASURANSI ALL-RISK ● DISPATCH 24/7</span>
     </div>
   </div>
 </section>
 
 {{-- ARMADA teaser --}}
 @php
-  $waAll = \App\Models\SiteSetting::getValue('contact.whatsapp','6281234567890');
+  $waAll = \App\Models\SiteSetting::getValue('contact.whatsapp','6285220868477');
   $waAllMsg = rawurlencode('Halo BM Trans, saya ingin info armada. Bisa dibantu?');
 @endphp
 <section id="armada" class="py-16 lg:py-20 bg-bm-cream border-y border-bm-dark/5 scroll-mt-24">
@@ -393,7 +393,7 @@
       <h2 class="mt-2 font-display font-black text-[40px] sm:text-[52px] leading-[0.85] uppercase text-white">Hubungi tim kami<br>untuk penawaran <span class="bg-bm-dark px-2">terbaik.</span></h2>
     </div>
     <div class="flex flex-col sm:flex-row gap-3">
-      <a href="https://wa.me/{{ \App\Models\SiteSetting::getValue('contact.whatsapp','6281234567890') }}" target="_blank" class="bg-bm-dark text-white px-8 py-4 font-display font-bold uppercase text-[14px] tracking-wide clip-notch inline-flex items-center gap-3">WhatsApp <span>→</span></a>
+      <a href="https://wa.me/{{ \App\Models\SiteSetting::getValue('contact.whatsapp','6285220868477') }}" target="_blank" class="bg-bm-dark text-white px-8 py-4 font-display font-bold uppercase text-[14px] tracking-wide clip-notch inline-flex items-center gap-3">WhatsApp <span>→</span></a>
       <a href="{{ route('contact') }}" class="bg-white text-bm-dark px-8 py-4 font-display font-bold uppercase text-[14px]">Form Penawaran</a>
     </div>
   </div>

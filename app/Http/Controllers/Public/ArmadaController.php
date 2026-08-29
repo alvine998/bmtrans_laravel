@@ -15,7 +15,7 @@ class ArmadaController extends Controller
         // Group by type for UI sections (optional)
         $grouped = $armadas->groupBy(fn($a) => $a->type ?: 'Lainnya');
 
-        $whatsapp = SiteSetting::getValue('contact.whatsapp', '6281234567890');
+        $whatsapp = SiteSetting::getValue('contact.whatsapp', '6285220868477');
         $waMessage = rawurlencode("Halo BM Trans, saya ingin negosiasi harga armada. Bisa dibantu?");
 
         return view('armada.index', compact('armadas', 'grouped', 'whatsapp', 'waMessage'), [

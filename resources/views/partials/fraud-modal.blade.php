@@ -34,7 +34,7 @@
       <div class="mt-7 bg-bm-yellow/20 border-l-4 border-bm-yellow p-4">
         <div class="font-mono text-[10px] uppercase tracking-widest font-bold text-bm-dark/60">Hubungi hanya melalui kanal resmi</div>
         <div class="mt-2 space-y-1 font-mono text-[12px] text-bm-dark">
-          <div>WA: {{ \App\Models\SiteSetting::getValue('contact.whatsapp', '6281271234567') }}</div>
+          <div>WA: {{ \App\Models\SiteSetting::getValue('contact.whatsapp', '6285220868477') }}</div>
           <div>Telp: {{ \App\Models\SiteSetting::getValue('contact.phone', '+62 711-123-456') }}</div>
           <div>{{ \App\Models\SiteSetting::getValue('contact.email', 'info@berkahmakmurtransport.co.id') }}</div>
         </div>

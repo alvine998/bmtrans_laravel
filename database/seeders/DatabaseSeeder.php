@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
         // Settings
         $defaults = [
             'contact.phone' => '+62 711-123-456',
-            'contact.whatsapp' => '6281271234567',
+            'contact.whatsapp' => '6285220868477',
             'contact.email' => 'info@berkahmakmurtransport.co.id',
             'contact.address' => 'Jl. Raya Jakarta Timur No. 88, Cakung, Jakarta 13910',
             'payment.term' => '14 hari',
